@@ -29,7 +29,7 @@ body {
 }
 
 body[theme="black"] {
-	background: var(--black); 
+	background: var(--black);
 	color: var(--white);
 }
 
@@ -50,8 +50,7 @@ a {
 	position: relative;
 	margin: 0 auto;
 	width: calc(100vw - 38.400000000000006rem);
-	height: 100%;
-	display: grid; 
+	display: grid;
 	-ms-grid-column-gap: 6.4rem;
 	grid-column-gap: 6.4rem;
 	-ms-grid-template-columns: repeat(16, 1fr);
@@ -65,34 +64,69 @@ a {
 	grid-column: 1 / span 16;
 }
 
-.btn {
-	padding: 1.1rem 3.2rem 1.1rem 2.2rem;
-	background-color: var(--blue);
-	height: 5.6rem;
-	font-size: 2.2rem;
-	line-height: 1.5;
-	color: var(--white);
-}
 .em {
 	color: var(--blue);
 }
 
+.mt12 {
+	margin-top: 1.2rem;
+}
+
+.btn {
+	padding: 1.1rem 3.2rem 1.1rem 2.2rem;
+	background-color: var(--blue);
+	display: inline-block;
+	height: 5.6rem;
+	box-sizing: border-box;
+	font-size: 2.2rem;
+	line-height: 1.5;
+	color: var(--white);
+	-webkit-transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn > svg{
+	margin-left: 1.2rem;
+	transform: translateX(0);
+	width: 1.8rem;
+	height: 1.8rem;
+	-webkit-transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover {
+	background-color: #263139;
+}
+.btn:hover > svg{
+	transform: translateX(0.8rem);
+}
+
+
 /* header */
 header {
-	position: fixed; 
+	position: fixed;
 	top: 0;
-	width: 100%; 
-	height: 92px; 
-	border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3); 
+	width: 100%;
+	height: 92px;
+	border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);
+	z-index: 1;
 }
 
 header > div.layout {
 	position: relative;
 	height: 100%;
 }
+header > div.layout > div.grid {
+	height: 100%;
+}
 
 header div.logo {
 	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 }
@@ -102,6 +136,10 @@ header ul.category {
 	top: 0;
 	width: 100%;
 	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -115,28 +153,37 @@ header ul.category {
 header ul.category > li{
 	margin-left: 28px;
 	font-weight: 600;
+	cursor: pointer;
 }
 
- header + div.layout {
-	-webkit-transform: translateY(110px);
-	-moz-transform: translateY(110px);
-	-ms-transform: translateY(110px);
-	-o-transform: translateY(110px);
-	transform: translateY(110px);
+ /* header + div.layout {
 	overflow: hidden;
- }
+ } */
 
 /* aside */
 aside {
 	position: absolute;
-	left: 0;
+	top: 9rem;
+	bottom: 0;
+	margin-top: 0rem;
+	padding-top: 2.4rem;
 	width: 300px;
+	height: auto;
 	line-height: 45px;
 	font-size: 18px;
 	font-weight: bold;
-	float: left;
 }
 
+aside > ul.main_nav  {
+	/* -webkit-transform: translateY(110px);
+	-moz-transform: translateY(110px);
+	-ms-transform: translateY(110px);
+	-o-transform: translateY(110px);
+	transform: translateY(110px); */
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
+}
 aside > ul.main_nav > li {
 	cursor: pointer;
 }
@@ -158,10 +205,26 @@ aside > ul.main_nav > li > ul.sub_nav > li.on {
 
 /* content */
 .content{
+	margin-top: 5.6rem;
+	padding-top: 12.8rem;
 	-ms-grid-column: 5 / span 12;
 	grid-column: 5 / span 12;
 }
 
+.content > section > div{
+	margin-bottom: 19.2rem;
+	padding-top: 4.8rem;
+}
+.content > section > div > h4 {
+	line-height: 5.6rem;
+	font-size: 4.5rem;
+}
+.content > section > div > h5 {
+	margin-top: 4.8rem;
+	margin-bottom: 2.4rem;
+	font-size: 3rem;
+	font-weight: 600;
+}
 .content > section > div > p {
 	margin-top: 2.4rem;
 	margin-bottom: 5.5rem;
@@ -196,7 +259,20 @@ section#Overview > div > h1 {
 	.btn {
 		font-size: 1.8rem;
 	}
-
+	aside {
+		left: 14.399999999999999rem;
+	}
+	.content {
+		margin-top: 3rem;
+	}
+	.content > section > div > h4 {
+		line-height: 4.5rem;
+		font-size: 3.6rem;
+	}
+	.content > section > div > h5 {
+		margin-top: 3.2rem;
+		margin-bottom: 1.6rem;
+	}
 	.content > section > div > p {
 		margin-top: 2.4rem;
 		margin-bottom: 4rem;
@@ -215,6 +291,16 @@ section#Overview > div > h1 {
 	.grid_col {
 		-ms-grid-column: 1 / span 12;
 		grid-column: 1 / span 12;
+	}
+	aside {
+		margin-left: -2rem;
+	}
+	.content{
+		margin-top: 11rem;
+	}
+	.content > section > div > h4 {
+		line-height: 4.0rem;
+		font-size: 3.2rem;
 	}
 	.content > section > div > p {
 		margin-top: 1.6rem;
@@ -235,6 +321,13 @@ section#Overview > div > h1 {
 		-ms-grid-column: 1 / span 6;
 		grid-column: 1 / span 6;
 	}
+	.content{
+		margin-top: calc(10.8rem + 2.4vw);
+	}
+	.content > section > div > h4 {
+		line-height: 3rem;
+		font-size: 2.4rem;
+	}
 	.content > section > div > .update_date {
 		margin-top: 1.2rem;
 		margin-bottom: 1.2rem;
@@ -242,4 +335,3 @@ section#Overview > div > h1 {
 		font-size: 1.4rem;
 	}
 }
-
