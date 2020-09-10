@@ -3,9 +3,11 @@ $(window).scroll(function(){
 
 	// header
 	if (scroll_top > 0) {
-		$( 'header' ).hide();
+		$('header').hide();
+		$('aside').addClass('scr');
 	} else {
-		$( 'header' ).show();
+		$('header').show();
+		$('aside').removeClass('scr');
 	}
 
 	return false;
@@ -29,5 +31,4 @@ $(document).on('click','.sub_nav li', function(){
 	$('.sub_nav li.on').removeClass('on');
 	$(this).addClass('on');
 
-	return false;
 });
