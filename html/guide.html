@@ -206,7 +206,7 @@
 						<div class="update_date">Updated 02/19/2019</div>
 						<h1>Logo</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend feugiat gravida. Phasellus pulvinar ut nisi ac elementum. Nulla maximus lobortis nulla mattis rutrum. Nullam commodo, neque sed venenatis interdum, nibh massa interdum nulla, eu viverra nisl lorem sed metus. Nunc vestibulum sapien at ante blandit, ornare congue risus dictum. Maecenas id tellus vitae purus ultrices rutrum. Curabitur sed ex ut ex auctor volutpat vel id metus.</p>
-						<a class="btn">
+						<a href="#" class="btn">
 							Download
 							<svg width="24" height="22" viewBox="0 0 24 22">
 								<defs>
@@ -307,8 +307,8 @@
 						<p>Integer vulputate mattis nulla non porta.</p>
 
 						<ul class="tab display_flex">
-							<li class="btn_tab_ver on">Vertical Lockup</li>
-							<li class="btn_tab_hor">Horizontal Lockup</li>
+							<li class="btn_tab on" >Vertical Lockup</li>
+							<li class="btn_tab">Horizontal Lockup</li>
 						</ul>
 						<div class="tab_content">
 							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="" class="ver">
@@ -348,7 +348,7 @@
 
 					<div id="logo_guidance">
 						<h4>Logo guidance</h4>
-						<ul class="img_list img_6">
+						<ul class="img_list img_3">
 							<li>
 								<div class="mark_x">✕</div>
 								<img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt="">
@@ -384,17 +384,17 @@
 
 					<div >
 						<h4>Don't forget these important legal reminders:</h4>
-						<ul>
+						<ol>
 							<li>Vestibulum pellentesque justo a nunc dapibus placerat.</li>
 							<li>Maecenas at nisi eu sem porta volutpat.</li>
 							<li>Aenean at felis purus. Suspendisse a erat ut orci ullamcorper commodo.</li>
 							<li>raesent sed pharetra neque, ac interdum est. Proin eros ante, malesuada vitae arcu sed, iaculis mattis libero.</li>
-						</ul>
+						</ol>
 					</div>
 
 					<div id="logo_applications">
 						<h4>Logo Applications</h4>
-						<ul>
+						<ul class="img_list img_2">
 							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=536*572+logo+img" alt=""></li>
 							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=536*572+logo+img" alt=""></li>
 						</ul>
@@ -403,7 +403,7 @@
 					<div id="logo_localization">
 						<h4>Localization</h4>
 						<p>Phasellus et porttitor mi. Vivamus aliquam dolor ligula, sed rhoncus sem blandit sit amet. </p>
-						<ul>
+						<ul class="img_list img_2">
 							<li>
 								<h5>Left to right</h5>
 								<img src="https://via.placeholder.com/1280x720/ED553B/ffffff?text=1280*720+logo+img" alt="">
@@ -425,20 +425,24 @@
 
 					<div id="logo_summary">
 						<h4>Logo Summary</h4>
-						<ul>
-							<li>
-								<div>01</div>
-								<p>Phasellus ac nisl</p>
-							</li>
-							<li>
-								<div>02</div>
-								<p>Morbi id</p>
-							</li>
-							<li>
-								<div>03</div>
-								<p>tempor sapien Mauris ac congue ipsum</p>
-							</li>
-						</ul>
+						<div class="summary grid">
+							<div class="grid_12_col grid_12">
+								<ul class="grid_12_col">
+									<li>
+										<div class="num">01</div>
+										<p>Phasellus ac nisl</p>
+									</li>
+									<li>
+										<div class="num">02</div>
+										<p>Morbi id</p>
+									</li>
+									<li>
+										<div class="num">03</div>
+										<p>tempor sapien Mauris ac congue ipsum</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -449,8 +453,16 @@
 						<div class="update_date">Updated 02/19/2019</div>
 						<h1>Brand Architecture</h1>
 						<p>Phasellus ac nisl semper orci varius laoreet. Morbi id tempor sapien. Mauris ac congue ipsum, et fermentum tortor. Ut ut ornare sapien. Cras ac nisl sed dolor rutrum sollicitudin. Maecenas pretium sed eros sed pharetra. Cras sit amet hendrerit lectus. Praesent id congue lorem.</p>
-						<a href="">Download →</a>
-						<div class="update_date">Updated 02/19/2019</div>
+						<a href="" class="btn">
+							Download
+							<svg width="24" height="22" viewBox="0 0 24 22">
+								<defs>
+										<path id="a" d="M24 12l-7.723 11H12.12l6.534-9.167H0v-3.666h18.653L12.12 1h4.158z"></path>
+								</defs>
+								<use fill="currentColor" fill-rule="evenodd" transform="translate(0 -1)" xlink:href="#a"></use>
+							</svg>
+						</a>
+						<div class="update_date mt12">Updated 02/19/2019</div>
 					</div>
 
 					<div id="arch_visualHierarchy">
@@ -458,17 +470,29 @@
 						<p>Aenean at felis purus. Suspendisse a erat ut orci ullamcorper commodo. Praesent sed pharetra neque, ac interdum est. Proin eros ante, malesuada vitae arcu sed, iaculis mattis libero.</p>
 
 						<h5>Primary Lockup</h5>
-						<img src="https://via.placeholder.com/1600x900/ED553B/ffffff?text=1600*900+logo+img" alt="">
+						<ul class="img_list img_1 ">
+							<li>
+								<img src="https://via.placeholder.com/1600x900/ED553B/ffffff?text=1600*900+logo+img" alt="">
+							</li>
+						</ul>
 						<p>Aenean at felis purus. Suspendisse a erat ut orci ullamcorper commodo.</p>
 						<p>Praesent sed pharetra neque, ac interdum est.</p>
 
 						<h5>Secondary Lockup</h5>
-						<img src="https://via.placeholder.com/958x1080/ED553B/ffffff?text=958*1080+logo+img" alt="">
+						<ul class="img_list img_2">
+							<li>
+								<img src="https://via.placeholder.com/958x1080/ED553B/ffffff?text=958*1080+logo+img" alt="">
+							</li>
+						</ul>
 						<p>Nunc faucibus, elit eu commodo commodo, leo lorem feugiat tellus, sed consequat nisl ligula vel dui. Sed aliquet sagittis neque nec malesuada.</p>
 						<p>Phasellus et porttitor mi. Vivamus aliquam dolor ligula, sed rhoncus sem blandit sit amet. </p>
 
 						<h5>No lockup</h5>
-						<img src="https://via.placeholder.com/1600x900/ED553B/ffffff?text=1600*900+logo+img" alt="">
+						<ul class="img_list img_1">
+							<li>
+								<img src="https://via.placeholder.com/1600x900/ED553B/ffffff?text=1600*900+logo+img" alt="">
+							</li>
+						</ul>
 						<p>Sed aliquet orci eu ligula dictum laoreet. Donec ut tincidunt lectus. Nunc lacinia neque id eros aliquet, et fermentum ante commodo. Curabitur fringilla, mi et rutrum fermentum, justo odio facilisis arcu, accumsan vehicula purus lectus ac libero. Nulla sit amet fermentum sapien. Curabitur viverra venenatis quam ac tincidunt. Fusce et diam interdum, imperdiet risus nec, bibendum lectus. Nullam nec lorem vel sem laoreet molestie. Aliquam ullamcorper urna purus, sit amet eleifend velit egestas vel.</p>
 						<p>Proin in venenatis elit. Vivamus non arcu in quam scelerisque euismod ac ut arcu.</p>
 					</div>
@@ -478,28 +502,128 @@
 						<p>Sub-brands are the distinct lines of business that service the needs of unique audiences.</p>
 
 						<h5>Criteria</h5>
-						<ul>
+						<ol>
 							<li>Unique entry point and customer workflow (i.e. standalone app)</li>
 							<li>Gross bookings > $50M or ELT approval</li>
-						</ul>
+						</ol>
 
-						<ul>
+						<ul class="img_list img_3">
 							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
 							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
 						</ul>
 
-						<ul class="tab">
-							<li>Vertical Lockup</li>
-							<li>Horizontal Lockup</li>
+						<ul class="tab display_flex">
+							<li class="btn_tab on">Vertical Lockup</li>
+							<li class="btn_tab ">Horizontal Lockup</li>
 						</ul>
 
-						<div>
-							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="">
-							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="">
+						<div class="tab_content">
+							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="" class="ver">
 						</div>
 					</div>
 
 					<div id="arch_organizationalBrands">
+						<h4>Organizational brands</h4>
+						<p>Organizational brands are teams within Uber that have built an external-facing brand. (e.g. innovative fields of study, specialized disciplines, or unique communities within our organization).</p>
+
+
+						<h5>Criteria</h5>
+						<ol>
+							<li>Provides positive equity to the master brands; and</li>
+							<li>At least $2M committed to branding annually; and</li>
+							<li>Significant external presence (at least 3 major conferences per year); and</li>
+							<li>Brand + ELT approval</li>
+						</ol>
+
+						<ul class="img_list img_3">
+							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
+						</ul>
+
+						<ul class="tab display_flex">
+							<li class="btn_tab on">Vertical Lockup</li>
+							<li class="btn_tab ">Horizontal Lockup</li>
+						</ul>
+
+						<div class="tab_content">
+							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="" class="ver">
+						</div>
+					</div>
+
+					<div id="arch_programs">
+						<h4>Programs</h4>
+						<p>A collection of features that collectively provide a distinct opportunity.</p>
+
+						<h5>Criteria</h5>
+						<ol>
+							<li>Unique customer experience</li>
+							<li>Spans across products</li>
+							<li>Long-term, ongoing initiative</li>
+						</ol>
+
+						<ul class="img_list img_2">
+							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/672x336/ED553B/ffffff?text=672*336+logo+img" alt=""></li>
+						</ul>
+
+						<ul class="tab display_flex">
+							<li class="btn_tab on">Vertical Lockup</li>
+							<li class="btn_tab ">Horizontal Lockup</li>
+						</ul>
+
+						<div class="tab_content">
+							<img src="https://via.placeholder.com/1600x511/ED553B/ffffff?text=1600*511+logo+img" alt="" class="ver">
+						</div>
+					</div>
+
+					<div id="arch_products">
+						<h4>Products</h4>
+						<p>The entry point for the offering and the option available.</p>
+
+						<h5>Criteria</h5>
+						<ol>
+							<li>Distinct audience and feature set; and</li>
+							<li>Gross bookings > $10M or Approved by sub-brand manager</li>
+						</ol>
+
+						<ul class="img_list img_3">
+							<li><img src="https://via.placeholder.com/235x85/ED553B/ffffff?text=235*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/428x88/ED553B/ffffff?text=428*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/298x87/ED553B/ffffff?text=298*auto+logo+img" alt=""></li>
+						</ul>
+
+						<p>*Some products do not receive a space, such as UberX and UberXL. Please consult with our internal brand toolkit for detailed information.</p>
+					</div>
+
+					<div id="arch_features">
+						<h4>Features</h4>
+						<p>Tools and technologies that support products.</p>
+						<p>Features do not have a lockup and are described with a simple & direct name, using the brand system of the product they support.</p>
+
+						<ul class="img_list img_3">
+							<li><img src="https://via.placeholder.com/235x85/ED553B/ffffff?text=235*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/428x88/ED553B/ffffff?text=428*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/298x87/ED553B/ffffff?text=298*auto+logo+img" alt=""></li>
+						</ul>
+					</div>
+
+					<div id="arch_internalTeams">
+						<h4>Internal Teams</h4>
+						<p>A non public-facing team name.</p>
+
+						<ul class="img_list img_3">
+							<li><img src="https://via.placeholder.com/235x85/ED553B/ffffff?text=235*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/428x88/ED553B/ffffff?text=428*auto+logo+img" alt=""></li>
+							<li><img src="https://via.placeholder.com/298x87/ED553B/ffffff?text=298*auto+logo+img" alt=""></li>
+						</ul>
+					</div>
+
+					<div id="arch_Partnerships">
+						<h4>Partnerships</h4>
+						<p>Aligning partnership logos should follow clearspace rules. The separating line between logos can be created using the vertical line glyph in the Uber Move Display Light at the same size as the logo.</p>
+					</div>
+					<div >
 						<h4>Names in copy </h4>
 						<p>It’s important to have a clear distinction between what is a lockup and what is information or copy.</p>
 						<p>When referring to a product or program name within a block of copy, write the name with spacing rules applied but keep the text weight consistent with the copy style. Do not use the lockup (which changes text weight) in headline or body copy.</p>
