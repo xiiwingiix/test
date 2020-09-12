@@ -12,6 +12,12 @@
 	--white :#fff; /* theme 색상과 반대 색상*/
 	--light-gray : #77797a; /* theme 색상과 반대 색상(흐린 흰색)*/
 	--blue : #276ef1; /* main 색상 */
+	--green : rgb(5, 163, 87);
+	--yellow : #ffc043;
+	--red : #e11900;
+	--brown :#99644c;
+	--orange : #ff6937;
+	--purple : #7556bf;
 	--font : 'Nunito Sans'; /* font */
 }
 
@@ -69,6 +75,7 @@ aside > ul.main_nav > li {cursor: pointer;}
 aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: var(--light-gray);}
 aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
 aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
+aside > ul.main_nav > li > ul.sub_nav > li > a {display: block;}
 
 /* content */
 .content{margin-top: 5.6rem;padding-top: 12.8rem;-ms-grid-column: 5 / span 12;grid-column: 5 / span 12;}
@@ -85,16 +92,16 @@ aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
 
 section > div > ul.img_list {margin-right: -3.2rem;margin-bottom: 6.4rem;margin-top: 3.2rem;margin-left: -3.2rem;justify-content: flex-start;-webkit-box-pack: start;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;flex-wrap: wrap;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
 section > div > ul.img_list > li{margin-right: 3.2rem;margin-left: 3.2rem;margin-bottom: 6.4rem;}
-
 section > div > ul.img_list.img_1 > li{flex: 0 1 calc(100% - 6.4rem);}
 section > div > ul.img_list.img_2 > li{flex: 0 1 calc(50% - 6.4rem);}
 section > div > ul.img_list.img_3 > li{flex: 0 1 calc(33.33% - 6.4rem);}
-section > div > ul.img_list.img_3 > li > p {margin-top: 1.2rem;line-height: 2.2rem; font-size:1.6rem;}
 section > div > ul.img_list.img_4 > li{flex: 0 1 calc(25% - 6.4rem);}
 section > div > ul.img_list.img_5 > li{flex: 0 1 calc(20% - 6.4rem);}
-
+section > div > ul.img_list.img_6 > li{flex: 0 1 calc(16.66% - 6.4rem);}
 section > div > ul.img_list > li > div.txt{line-height: 2.2rem;font-size: 1.6rem;margin-top: 1.2rem;margin-bottom: 0rem;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;}
 section > div > ul.img_list > li > div.mark_x{font-size: 2.5em;color: #ff001f;line-height: 2.7rem;font-weight: bold;margin-bottom: 1.2rem;}
+section > div > ul.img_list > li > p {margin-top: 1.2rem;line-height: 2.2rem; font-size:1.6rem;}
+section > div > ul.img_list > li > p.lar{margin-top: 1.6rem;line-height: 2.2rem;font-size:1.6rem;}
 
 section > div > ul.zoom_img {margin-top: 6.4rem;padding-bottom: 4.8rem;-webkit-box-pack: justify;justify-content: space-between;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;}
 section > div > ul.zoom_img > li.zoom_target {margin-right: 3.2rem;margin-bottom: 4.8rem;width: 50%;}
@@ -123,6 +130,148 @@ section > div > div.summary > div > ul > li {padding-bottom: 9.6rem;}
 section > div > div.summary > div > ul > li > div.num {margin-bottom: 5.5rem;line-height: 3.7rem;font-size: 2.5rem;}
 section > div > div.summary > div > ul > li > p {line-height: 9rem;font-size: 9rem; font-weight: 600;}
 
+section > div > ul.colors_guide {-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;margin-right: -1.2rem;margin-left: -1.2rem;}
+section > div > ul.colors_guide > li {
+	overflow: hidden;
+	height: 42rem;
+	transition-timing-function: cubic-bezier(0.33, 0, 0, 1);
+	transition-delay: 0.125s;
+	flex-shrink: 1;
+	-webkit-box-flex: 1;flex-grow: 1;flex-basis: 50%;
+	transition-duration: 0.5s;
+	margin: 1.2rem;
+	flex-basis: 16.6667%;
+}
+section > div > ul.colors_guide > li.green {background-color: var(--green)}
+section > div > ul.colors_guide > li.yellow {background-color: var(--yellow)}
+section > div > ul.colors_guide > li.red {background-color: var(--red)}
+section > div > ul.colors_guide > li.brown {background-color: var(--brown)}
+section > div > ul.colors_guide > li.orange {background-color: var(--orange)}
+section > div > ul.colors_guide > li.purple {background-color: var(--purple)}
+section > div > ul.colors_guide > li > div {
+	visibility: hidden;
+	opacity: 0;
+	transition: transform 0.65s,visibility 0s, opacity 0.5s linear;
+	height: 100%;
+	transform: translateX(-105%);
+	position: relative;
+	padding: 1.2rem;
+	white-space: nowrap;
+	transition-timing-function: cubic-bezier(0.33, 0, 0, 1);
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	transition-property: all;
+	transition-delay: 0.65s;
+	transition-duration: 0.325s;}
+section > div > ul.colors_guide > li > div > h5 {line-height: 2.7rem;font-size: 1.8rem;}
+section > div > ul.colors_guide > li > div > ul {position: absolute; bottom: 0;margin: 0.8em 0;line-height: 2.7rem;font-size: 1.8rem;}
+section > div > ul.colors_guide > li.on {flex-basis: 50%;}
+section > div > ul.colors_guide > li.on > div {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(0);
+}
+section > div#color_specialtyColors > ul.colors_guide > li {height: 4.3rem;font-size: 1.8rem;}
+section > div#color_specialtyColors > ul.colors_guide > li:nth-child(5),
+section > div#color_specialtyColors > ul.colors_guide > li:nth-child(6),
+section > div#color_specialtyColors > ul.colors_guide > li:nth-child(7),
+section > div#color_specialtyColors > ul.colors_guide > li:nth-child(8),
+section > div#color_specialtyColors > ul.colors_guide > li:nth-child(9) {color: #000}
+
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(1) {background-color: #2E224C}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(2) {background-color: #453473}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(3) {background-color: #574191}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(4) {background-color: #7356BF}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(5) {background-color: #957FCE}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(6) {background-color: #C1B5E3}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(7) {background-color: #E3DDF2}
+section > div#color_specialtyColors > ul.colors_guide.Violet > li:nth-child(8) {background-color: #F4F1FA}
+
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(1) {background-color: #050C4D}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(2) {background-color: #081270}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(3) {background-color: #0A1899}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(4) {background-color: #0E1FC1}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(5) {background-color: #535FCF}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(6) {background-color: #949CE3}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(7) {background-color: #D2D7F0}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(8) {background-color: #EBEDFA}
+section > div#color_specialtyColors > ul.colors_guide.dark_blue > li:nth-child(8) {background-color: #EBEDFA}
+
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(1) {background-color: #102C60}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(2) {background-color: #174291}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(3) {background-color: #1E54B7}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(4) {background-color: #276EF1}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(5) {background-color: #5B91F5}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(6) {background-color: #A0BFF8}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(7) {background-color: #D4E2FC}
+section > div#color_specialtyColors > ul.colors_guide.blue > li:nth-child(8) {background-color: #EFF3FE}
+
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(1) {background-color: #10462D}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(2) {background-color: #156A41}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(3) {background-color: #09864A}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(4) {background-color: #05A357}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(5) {background-color: #06C167}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(6) {background-color: #66D19E}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(7) {background-color: #ADDEC9}
+section > div#color_specialtyColors > ul.colors_guide.green > li:nth-child(8) {background-color: #E6F2ED}
+
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(1) {background-color: #674D1B}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(2) {background-color: #997328}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(3) {background-color: #BC8B2C}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(4) {background-color: #FFC043}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(5) {background-color: #FFCF70}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(6) {background-color: #FFE3AC}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(7) {background-color: #FFF2D9}
+section > div#color_specialtyColors > ul.colors_guide.yellow > li:nth-child(8) {background-color: #FFFAF0}
+
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(1) {background-color: #672A16}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(2) {background-color: #9A3F21}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(3) {background-color: #C14F29}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(4) {background-color: #FF6937}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(5) {background-color: #FA9269}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(6) {background-color: #FABDA5}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(7) {background-color: #FFE1D6}
+section > div#color_specialtyColors > ul.colors_guide.orange > li:nth-child(8) {background-color: #FEF3EF}
+
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(1) {background-color: #5A0A00}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(2) {background-color: #870F00}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(3) {background-color: #AB1300}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(4) {background-color: #E11900}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(5) {background-color: #E85C4A}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(6) {background-color: #F1998E}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(7) {background-color: #FED7D2}
+section > div#color_specialtyColors > ul.colors_guide.red > li:nth-child(8) {background-color: #FFEFED}
+
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(1) {background-color: #3D281E}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(2) {background-color: #5C3C2E}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(3) {background-color: #744C3A}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(4) {background-color: #99644C}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(5) {background-color: #B18977}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(6) {background-color: #D2BBB0}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(7) {background-color: #EBE0DB}
+section > div#color_specialtyColors > ul.colors_guide.brown > li:nth-child(8) {background-color: #F6F0EA}
+
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(1) {background-color: #141414}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(2) {background-color: #333333}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(3) {background-color: #545454}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(4) {background-color: #757575}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(5) {background-color: #AFAFAF}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(6) {background-color: #CBCBCB}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(7) {background-color: #E2E2E2}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(8) {background-color: #EEEEEE}
+section > div#color_specialtyColors > ul.colors_guide.dark_brown > li:nth-child(9) {background-color: #F6F6F6}
+
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(1) {background-color: #142328}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(2) {background-color: #394145}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(3) {background-color: #556268}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(4) {background-color: #6C7C83}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(5) {background-color: #8FA3AD}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(6) {background-color: #A1BDCA}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(7) {background-color: #CCDFE5}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(8) {background-color: #EBF5F7}
+section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(9) {background-color: #F4FAFB}
+
+
 /* //basic */
 
 @media screen and (max-width: 1600px){
@@ -141,6 +290,7 @@ section > div > ul.img_list {margin-right: -2.4rem;margin-bottom: 4.8rem;margin-
 section > div > ul.img_list > li{margin-right: 2.4rem;margin-left: 2.4rem;margin-bottom: 4.8rem;}
 section > div > ul.img_list.img_1 > li{flex: 0 1 calc(100% - 4.8rem);}
 section > div > ul.img_list.img_4 > li{flex: 0 1 calc(25% - 4.8rem);}
+section > div > ul.img_list.img_6 > li{flex: 0 1 calc(16.66% - 4.8rem);}
 
 section > div > ul.zoom_img > li.zoom_target > p{line-height: 1.8rem;font-size: 1.2rem;}
 section > div > ul.zoom_img > li.zoom_target + li {margin-left: 2.4rem;}
@@ -170,6 +320,8 @@ section > div > ul.img_list {margin-right: -1.8rem;margin-bottom: 3.6rem;margin-
 section > div > ul.img_list > li{margin-right: 1.8rem;margin-left: 1.8rem;margin-bottom: 3.6rem;}
 section > div > ul.img_list.img_1 > li{flex: 0 1 calc(100% - 3.6rem);}
 section > div > ul.img_list.img_4 > li{flex: 0 1 calc(25% - 3.6rem);}
+section > div > ul.img_list.img_6 > li{flex: 0 1 calc(16.66% - 3.6rem);}
+
 section > div > ul.zoom_img {margin-top: 3.6rem;padding-bottom: 3.6rem;}
 section > div > ul.zoom_img > li.zoom_target {margin-right: 2.4rem;margin-bottom: 3.6rem;}
 section > div > ul.zoom_img > li.zoom_target > h5{margin-top: 0rem;margin-bottom: 0.8rem;line-height: 2.7rem;font-size: 1.8rem;}
@@ -200,7 +352,8 @@ section > div > ul.img_list {margin-right: 1.6rem;margin-bottom: 2.4rem;margin-t
 section > div > ul.img_list > li{margin-left: 1.6rem;margin-left: 1.6rem;margin-bottom: 2.4rem;}
 section > div > ul.img_list.img_1 > li{width: 100%;}
 section > div > ul.img_list.img_4 > li{width: calc(50% - 3.2rem);}
-section > div > ul.img_list.img_6 > li > p {margin-top: 0.6rem;}
+section > div > ul.img_list.img_6 > li {width: calc(50% - 3.2rem);}
+section > div > ul.img_list.img_3 > li > p {margin-top: 0.6rem;}
 section > div > ul.img_list > li > div.txt{margin-top: 0.6rem;margin-bottom: 0rem;}
 section > div > ul.img_list > li > div.mark_x{font-size: 1.8em;margin-bottom: 0.6rem;}
 

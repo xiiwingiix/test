@@ -1,3 +1,4 @@
+// scroll
 $(window).scroll(function(){
 	var scroll_top = $(document).scrollTop();
 
@@ -12,10 +13,10 @@ $(window).scroll(function(){
 
 	return false;
 });
+
 // main_nav
 $(document).on('click','.main_nav > li', function(){
-	var item = $(this).parent().attr('class');
-	var is_open = $('.sub_nav.'+item).is(':visible');
+	var is_open = $(this).find('.sub_nav').is(':visible');
 
 	if (is_open) {
 		$('.sub_nav').hide();
@@ -27,8 +28,25 @@ $(document).on('click','.main_nav > li', function(){
 });
 
 // sub_nav
-$(document).on('click','.sub_nav li', function(){
+$(document).on('click','.sub_nav a', function(){
+	var hashtag = $(this).attr('href');
+
 	$('.sub_nav li.on').removeClass('on');
+	$(this).closest('li').addClass('on');
+
+	goto(hashtag);
+
+	return false;
+});
+
+function goto($hashtag){
+	document.location = "/html/guide.html" + $hashtag;
+}
+
+$(document).on('mouseenter','.colors_guide > li', function(){
+	$(this).closest('.colors_guide').find('li').removeClass('on');
 	$(this).addClass('on');
 
+
+	return false;
 });
