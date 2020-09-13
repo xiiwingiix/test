@@ -1,3 +1,20 @@
+
+$(document).ready(function(){
+	var swiper = new Swiper('.swiper-container', {
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				return '0'+current + ' / ' + '0'+total;
+			}
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+})
 // scroll
 $(window).scroll(function(){
 	var scroll_top = $(document).scrollTop();
