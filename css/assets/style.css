@@ -370,6 +370,48 @@ section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(7) {ba
 section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(8) {background-color: #EBF5F7}
 section > div#color_specialtyColors > ul.colors_guide.gray > li:nth-child(9) {background-color: #F4FAFB}
 
+section > div#illustration_colorPalettes > ul.colors_guide > li {height: 4.3rem;font-size: 1.8rem;}
+
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(1) {background-color: #276EF1}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(2) {background-color: #5290FF}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(3) {background-color: #71A4FF}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(4) {background-color: #9CC0FF}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(5) {background-color: #C6DAFF}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(6) {background-color: #E9F1FF}
+section > div#illustration_colorPalettes > ul.colors_guide.blue > li:nth-child(7) {background-color: #F3F8FF}
+
+section > div#illustration_colorPalettes > ul.colors_guide.green > li:nth-child(1) {background-color: #47B275}
+section > div#illustration_colorPalettes > ul.colors_guide.green > li:nth-child(2) {background-color: #BCE5C0}
+section > div#illustration_colorPalettes > ul.colors_guide.green > li:nth-child(3) {background-color: #DFF7E6}
+
+section > div#illustration_colorPalettes > ul.colors_guide.yellow > li:nth-child(1) {background-color: #FFC043}
+section > div#illustration_colorPalettes > ul.colors_guide.yellow > li:nth-child(2) {background-color: #FFE1A8}
+section > div#illustration_colorPalettes > ul.colors_guide.yellow > li:nth-child(3) {background-color: #FFF5E6}
+
+section > div#illustration_colorPalettes > ul.colors_guide.red > li:nth-child(1) {background-color: #F25138}
+section > div#illustration_colorPalettes > ul.colors_guide.red > li:nth-child(2) {background-color: #FC8484}
+section > div#illustration_colorPalettes > ul.colors_guide.red > li:nth-child(3) {background-color: #FFE7F7}
+
+section > div#illustration_colorPalettes > ul.colors_guide.brown > li:nth-child(1) {background-color: #99644C}
+section > div#illustration_colorPalettes > ul.colors_guide.brown > li:nth-child(2) {background-color: #C78982}
+section > div#illustration_colorPalettes > ul.colors_guide.brown > li:nth-child(3) {background-color: #F2D8D8}
+
+section > div#illustration_colorPalettes > ul.colors_guide.orange > li:nth-child(1) {background-color: #FF7D49}
+section > div#illustration_colorPalettes > ul.colors_guide.orange > li:nth-child(2) {background-color: #FFAFA1}
+section > div#illustration_colorPalettes > ul.colors_guide.orange > li:nth-child(3) {background-color: #FFE2E0}
+
+section > div#illustration_colorPalettes > ul.colors_guide.Violet > li:nth-child(1) {background-color: #2E224C}
+section > div#illustration_colorPalettes > ul.colors_guide.Violet > li:nth-child(2) {background-color: #AE9EFF}
+section > div#illustration_colorPalettes > ul.colors_guide.Violet > li:nth-child(3) {background-color: #EADFFF}
+
+section > div#illustration_colorPalettes > ul.colors_guide.gray > li:nth-child(1) {background-color: #AFAFAF}
+section > div#illustration_colorPalettes > ul.colors_guide.gray > li:nth-child(2) {background-color: #CBCBCB}
+section > div#illustration_colorPalettes > ul.colors_guide.gray > li:nth-child(3) {background-color: #E2E2E2}
+section > div#illustration_colorPalettes > ul.colors_guide.gray > li:nth-child(4) {background-color: #EEEEEE}
+section > div#illustration_colorPalettes > ul.colors_guide.gray > li:nth-child(5) {background-color: #F6F6F6}
+
+
+
 section > div > div.swiper-container {margin-top: 6.4rem;padding-bottom: 4.8rem;}
 section > div > div.swiper-container > div.swiper-wrapper > div.swiper-slide > img {width: 100%;}
 section > div > div.swiper-container > div.swiper-option {margin-top: 2.2rem;height: 1.8rem;}
