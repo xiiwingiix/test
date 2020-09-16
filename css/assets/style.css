@@ -315,8 +315,9 @@ section> div > div.aside_tab > ul.img_list > li.on {	display: block;}
 /* faq */
 .faq aside {width: 17.5vw; position: static; float: left;}
 .faq .content {width: calc(100% - 17.5vw); margin-left: 0; float: left;}
-.faq .content > div > div.tit {line-height: 9.4rem;font-size: 2.5rem; font-weight: 800;border-bottom: 0.1rem solid #e2e2e2;}
-.faq .content > div > div.txt {line-height: 3.3rem;font-size: 2.2rem;padding: 3rem 0;width: 62.5%;}
+.faq .content > div[tab-group] {border-bottom: 0.1rem solid #e2e2e2;}
+.faq .content > div > div.tit {line-height: 9.4rem;font-size: 2.5rem; font-weight: 800; cursor: pointer;}
+.faq .content > div > div.txt {line-height: 3.3rem;font-size: 2.2rem;padding: 3rem 0;width: 62.5%; display: none;}
 
 @media screen and (max-width: 1600px){
 .grid {width: calc(100% - 28.799999999999997rem);-ms-grid-column-gap: 4.8rem;grid-column-gap: 4.8rem;-ms-grid-template-columns: repeat(16, 1fr);grid-template-columns: repeat(16, 1fr);}
