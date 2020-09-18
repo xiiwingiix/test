@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Godo';
+	src: 	url('./font/Godo/GodoB.ttf')format('truetype'),
+				url('./font/Godo/GodoB.woff') format('woff'),
+				url('./font/Godo/GodoB.woff2') format('woff2'),
+				url('./font/Godo/GodoB.eot') format('embedded-opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Godo';
+	src: 	url('./font/Godo/GodoM.ttf')format('truetype'),
+				url('./font/Godo/GodoM.woff') format('woff'),
+				url('./font/Godo/GodoM.woff2') format('woff2'),
+				url('./font/Godo/GodoM.eot') format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NotoSansCJK';
+	src: 	url('./font/NotoSansCJK/NotoSansKR-Black.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-Black.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Black.eot') format('embedded-opentype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NotoSansCJK';
+	src: 	url('./font/NotoSansCJK/NotoSansKR-Bold.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-Bold.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Bold.eot') format('embedded-opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSansCJK';
+	src:
+				url('./font/NotoSansCJK/NotoSansKR-Medium.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-Medium.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Medium.eot') format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSansCJK';
+	src: 	
+				url('./font/NotoSansCJK/NotoSansKR-Regular.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-RegularRegular.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Regular.eot') format('embedded-opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSansCJK';
+	src: 	url('./font/NotoSansCJK/NotoSansKR-Regular.ttf')format('truetype'),
+				url('./font/NotoSansCJK/NotoSansKR-Regular.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-RegularRegular.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Regular.eot') format('embedded-opentype');
+	font-weight: 300;
+	font-style: normal;
+}
