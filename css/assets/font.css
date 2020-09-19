@@ -48,18 +48,17 @@
 }
 @font-face {
 	font-family: 'NotoSansCJK';
-	src: 	
+	src:
 				url('./font/NotoSansCJK/NotoSansKR-Regular.woff') format('woff'),
-				url('./font/NotoSansCJK/NotoSansKR-RegularRegular.woff2') format('woff2'),
+				url('./font/NotoSansCJK/NotoSansKR-Regular.woff2') format('woff2'),
 				url('./font/NotoSansCJK/NotoSansKR-Regular.eot') format('embedded-opentype');
 	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'NotoSansCJK';
-	src: 	url('./font/NotoSansCJK/NotoSansKR-Regular.ttf')format('truetype'),
-				url('./font/NotoSansCJK/NotoSansKR-Regular.woff') format('woff'),
-				url('./font/NotoSansCJK/NotoSansKR-RegularRegular.woff2') format('woff2'),
+	src: 		url('./font/NotoSansCJK/NotoSansKR-Regular.woff') format('woff'),
+				url('./font/NotoSansCJK/NotoSansKR-Regular.woff2') format('woff2'),
 				url('./font/NotoSansCJK/NotoSansKR-Regular.eot') format('embedded-opentype');
 	font-weight: 300;
 	font-style: normal;

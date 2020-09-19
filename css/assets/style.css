@@ -1,34 +1,45 @@
 @charset "utf-8";
 
 /* header */
-header {position: fixed;top: 0;width: 100%;height: 92px;border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);z-index: 1;}
-header > div.layout {position: relative;height: 100%;}
-header > div.layout > div.grid {height: 100%; display: flex;}
+header {position: fixed;top: 0;width: 100%;height: 90px;z-index: 1;/*border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);*/}
+header > div.layout {position: static; height: 100%;}
+header > div.layout > div.grid {height: 100%; display: flex; position: relative;z-index: 1}
+header > div.layout > div.bg {position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: #0c2340;display: none;}
+header[theme="light"] > div.layout > div.grid {color:#0c2340; }
+header[theme="dark"] > div.layout > div.grid {color:#F0F0F1; }
 header div.logo {height: 100%; align-items: center;}
 header ul.category {position: absolute;top: 0;width: 100%;height: 100%;align-items: center;flex-direction: row;-webkit-box-pack: end;-webkit-box-orient: horizontal;-webkit-box-direction: normal;justify-content: flex-end;font-size: 18px;}
 header ul.category > li{margin-left: 28px;font-weight: 600;cursor: pointer;}
 
 /* footer */
-footer > .grid {margin:2.4rem 0 0.5rem; height: 3.2rem;}
+footer {padding: 25px 0 30px; color: #a7aeb9}
+footer > .layout > .row {overflow: hidden; font-size: 10px;}
+footer > .layout > .row > :first-child{float: left;}
+footer > .layout > .row > :last-child{float: right;}
+footer > .layout > .row + .row {margin-top: 15px;}
+footer > .layout > .row ul{display: flex;}
+footer > .layout > .row ul.sns{align-items: flex-end; height: 36px; }
+footer > .layout > .row ul > li {margin-left: 15px; line-height: 1; cursor: pointer;}
+footer > .layout > .row ul.sns > li:hover {color: #F0F0F1}
+footer > .layout > .row ul.policy {align-items: flex-start;}
 
-/* aside */
-aside {position: absolute;top: 9rem;bottom: 0;margin-top: 0rem;padding-top: 2.4rem;width: 300px;height: auto;line-height: 45px;font-size: 18px;font-weight: bold;-webkit-transform: translateY(110px);-moz-transform: translateY(110px);-ms-transform: translateY(110px);-o-transform: translateY(110px); transform: translateY(110px);}
-aside.scr {-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0); transform: translateY(0); }
-aside > ul.main_nav  {position: -webkit-sticky;position: sticky;top:0;}
-aside > ul.main_nav > li {cursor: pointer;}
-aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: var(--light-gray);}
-aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
-aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
-aside > ul.main_nav > li > ul.sub_nav > li > a {display: block;}
 
-/* content */
-.content{margin-top: 5.6rem;padding-top: 4.8rem; width: calc(100% - 300px); margin-left: 300px;}
-.content > hr {border:none; border-bottom: 1px solid rgb(78, 84, 91);}
-.content > section {padding-top: 12.8rem;}
-.content > section > div{margin-bottom: 19.2rem;padding-top: 4.8rem;}
-.content > section > div > .update_date {color: var(--light-gray);line-height: 2.7rem;font-size: 1.8rem;}
-.content > section > div ul > li > img{width: 100%;border: 1px solid rgb(38, 49, 57);}
-.content > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 1.2rem;line-height: 3.3rem;font-size: 2.2rem;}
+
+/* guide.html */
+.guide aside {position: absolute;top: 9rem;bottom: 0;margin-top: 0rem;padding-top: 2.4rem;-webkit-transform: translateY(110px);-moz-transform: translateY(110px);-ms-transform: translateY(110px);-o-transform: translateY(110px); transform: translateY(110px);}
+.guide aside > ul.main_nav  {position: -webkit-sticky;position: sticky;top:0;}
+.guide aside > ul.main_nav > li {cursor: pointer;}
+.guide aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: #a7aeb9;}
+.guide aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
+.guide aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
+.guide aside > ul.main_nav > li > ul.sub_nav > li > a {display: block;}
+
+article > section {padding-top: 13px;}
+article > section > div{margin-bottom: 20px;padding-top: 5px;}
+article > section > div > .update_date {color: #a7aeb9;line-height: 27px;font-size: 14px;font-weight: 300;}
+article > section > div ul > li > img{width: 100%;border: 1px solid rgb(38, 49, 57);}
+article > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 1.2rem;line-height: 3.3rem;font-size: 2.2rem;}
+
 
 section > div ul.img_list {margin-right: -3.2rem;margin-bottom: 6.4rem;margin-top: 3.2rem;margin-left: -3.2rem;justify-content: flex-start;-webkit-box-pack: start;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;flex-wrap: wrap;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
 section > div ul.img_list > li{margin-right: 3.2rem;margin-left: 3.2rem;margin-bottom: 6.4rem;}
@@ -248,14 +259,28 @@ section> div > div.aside_tab > ul.img_list > li.on {	display: block;}
 /* //basic */
 
 /* faq */
-.faq aside {width: 17.5vw; position: static; float: left;}
-.faq .content {width: calc(100% - 17.5vw); margin-left: 0; float: left;}
-.faq .content > div[tab-group] {border-bottom: 0.1rem solid #e2e2e2;}
-.faq .content > div > div.tit {line-height: 3.7rem;padding: 2.8rem 5rem 2.8rem 0;font-size: 2.5rem; font-weight: 800; cursor: pointer; position: relative;}
-.faq .content > div > div.tit::after {position: absolute; top: 50%; right: 0; display: block; content: ''; width: 13px; height: 20px; background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='14' viewBox='0 0 9 14'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M9 7l-4.929 7H0l4.929-7L0 0h4.071z'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: cover;margin-top: -7px;}
-.faq .content > div > div.txt {line-height: 3.3rem;font-size: 2.2rem;padding: 3rem 0;width: 62.5%; display: none;}
-.faq > div.layout + div.layout {padding:19.2rem 0;}
-.faq > div.layout + div.layout .content{margin-left: 17.5vw;}
+.faq .layout {font-size: 0;}
+.faq .search_form {margin: 190px 0 60px;border-bottom: 2px solid #0c2340;line-height: 80px;vertical-align: middle;}
+.faq .search_form > svg {width: 40px; height: 40px; vertical-align: middle; margin-right: 20px; color: #dbe2e9;}
+.faq .search_form > input {background: transparent; border: none; outline: none; font-size: 40px; vertical-align: middle; color: #0c2340;width: calc(100% - 100px); font-weight: bold}
+.faq .search_form > input::placeholder {color: #0c2340;}
+.faq .search_form > input.focus::placeholder {color: #dbe2e9;}
+.faq .search_form > div.arrow {float: right; cursor: pointer;}
+.faq .search_form > div.arrow > svg{vertical-align: middle;}
+.faq aside {margin-right: 100px; margin-top: 30px; display: inline-block; vertical-align: top}
+.faq aside .main_nav > li {font-weight: 300;}
+.faq aside .main_nav > li.on {font-weight: 400;}
+.faq article {margin: 0; display: inline-block;}
+.faq article > div[tab-group] {border-bottom: 0.1rem solid #e2e2e2;display: none;}
+.faq article > div[tab-group="approvals"] {display: block;}
+.faq article > div > div.tit {line-height: 1.48;padding: 30px 50px 30px 0;font-size: 20px; font-weight: 800; cursor: pointer; position: relative;}
+.faq article > div > div.tit::after {position: absolute; top: 50%; right: 0; display: block; content: ''; width: 13px; height: 20px; background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='14' viewBox='0 0 9 14'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M9 7l-4.929 7H0l4.929-7L0 0h4.071z'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: cover;margin-top: -7px;}
+.faq article > div > div.txt {line-height: 2;font-size: 17px;padding: 3rem 0;width: 62.5%; display: none;}
+.faq article > div.no_result {font-size: 14px;}
+.faq article > div.no_result > div.txt {display: block;}
+.faq div.content.helpdesk > .layout {padding: 192px 0; text-align: right;}
+.faq div.content.helpdesk > .layout > article {text-align: left;}
+
 
 @media screen and (max-width: 1600px){
 .grid {width: calc(100% - 28.799999999999997rem);-ms-grid-column-gap: 4.8rem;grid-column-gap: 4.8rem;-ms-grid-template-columns: repeat(16, 1fr);grid-template-columns: repeat(16, 1fr);}
