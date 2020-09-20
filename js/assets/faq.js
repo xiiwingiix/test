@@ -19,7 +19,7 @@ $(window).scroll(function(e){
 
 // 검색 focus
 $(document).on('focus','[name="search_faq"]', function(){
-	$('.ico_search').css('color','#0c2340');
+	$('.ico_search').css('color','#c4d600');
 	$(this).addClass('focus');
 
 	return false;

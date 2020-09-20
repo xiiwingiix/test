@@ -38,12 +38,13 @@ article {transform: translateY(0);-moz-transform: translateY(0);-webkit-transfor
 article > section {padding-top: 13px;}
 article > section > div{margin-bottom: 20px;padding-top: 5px;}
 article > section > div > .update_date {color: #a7aeb9;line-height: 27px;font-size: 14px;font-weight: 300;}
-article > section > div ul > li > img{width: 100%;border: 1px solid rgb(38, 49, 57);}
-article > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 1.2rem;line-height: 3.3rem;font-size: 2.2rem;}
+article > section > div ul > li > img{border: 1px solid rgb(38, 49, 57);vertical-align: bottom;}
+article > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 12px;line-height: 33px;font-size: 22px;}
+article > section > div ul > li > p{width: 100%;margin-top: 12px;line-height: 22px; font-size:16px;}
 
 
-section > div ul.img_list {margin-right: -3.2rem;margin-bottom: 6.4rem;margin-top: 3.2rem;margin-left: -3.2rem;justify-content: flex-start;-webkit-box-pack: start;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;flex-wrap: wrap;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
-section > div ul.img_list > li{margin-right: 3.2rem;margin-left: 3.2rem;margin-bottom: 6.4rem;}
+section > div ul.img_list {margin-right: -3.2rem;margin-top: 3.2rem;margin-left: -3.2rem;display: flex;}
+section > div ul.img_list > li{margin-right: 3.2rem;margin-left: 3.2rem;}
 section > div ul.img_list.img_1 > li{width: calc(100% - 6.4rem);}
 section > div ul.img_list.img_2 > li{width: calc(50% - 6.4rem);}
 section > div h6 + ul.img_list.img_3 {margin-top: 0;}
@@ -51,15 +52,13 @@ section > div ul.img_list.img_3 > li{width: calc(33.33% - 6.4rem);}
 section > div ul.img_list.img_4 > li{width: calc(25% - 6.4rem);}
 section > div ul.img_list.img_5 > li{width: calc(20% - 6.4rem);}
 section > div ul.img_list.img_6 > li{width: calc(16.66% - 6.4rem);}
-section > div ul.img_list > li > div.txt{line-height: 2.2rem;font-size: 1.6rem;margin-top: 1.2rem;margin-bottom: 0rem;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;}
+/* section > div ul.img_list > li > div.txt{line-height: 22px;font-size: 15px;margin-top: 15px;margin-bottom: 0;font-weight:300;} */
 section > div ul.img_list > li > div.mark_x{font-size: 2.5em;color: #ff001f;line-height: 2.7rem;font-weight: bold;margin-bottom: 1.2rem;}
-section > div ul.img_list > li > p {margin-top: 1.2rem;line-height: 2.2rem; font-size:1.6rem;}
-section > div ul.img_list > li > p.lar{margin-top: 1.6rem;line-height: 2.2rem;font-size:1.6rem;}
+section > div ul.img_list > li > p.lar{margin-top: 1.6rem;line-height: 2.2rem;}
 
-section > div > ul.zoom_img {margin-top: 6.4rem;padding-bottom: 4.8rem;-webkit-box-pack: justify;justify-content: space-between;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;}
+section > div > ul.zoom_img {margin-top: 6.4rem;padding-bottom: 4.8rem;}
 section > div > ul.zoom_img > li.zoom_target {margin-right: 3.2rem;margin-bottom: 4.8rem;width: 50%;}
-section > div > ul.zoom_img > li.zoom_target > p{line-height: 2.2rem;font-size: 1.6rem;margin-top: 1.2rem;margin-bottom: 0rem;-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;}
-section > div > ul.zoom_img > li.zoom_target + li {margin-left: 3.2rem;width: 50%;padding-top: 4.2rem;}
+section > div > ul.zoom_img > li.zoom_target + li {margin-left: 3.2rem;width: 50%;padding-top: 42px;}
 section > div > ul.zoom_img > li.zoom_target + li > img{width: calc(50% - 3.2rem);float: left;margin-right: 3.2rem;margin-bottom: 6.4rem;transition-property: opacity;transition-duration: 0.5s;opacity: 0.3;}
 section > div > ul.zoom_img > li.zoom_target + li > img:hover{opacity: 1;}
 section > div > ul.zoom_img > li.zoom_target + li > img:nth-child(1){margin-left: 0rem;}
