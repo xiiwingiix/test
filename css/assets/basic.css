@@ -57,5 +57,5 @@ input[type=range]:focus::-ms-fill-lower {background: none;}input[type=range]:foc
 .layout {position: relative;margin: 0 auto;width: 1500px;}
 .layout > aside {width: 300px;height: auto;line-height: 45px;font-size: 18px;font-weight: bold; }
 .layout > aside .main_nav > li {position: relative; cursor: pointer;}
-.layout > aside .main_nav > li.on::before {content: ''; width: 6px; height: 6px; border-radius: 50%;background-color: #c4d600;left: -20px; display: block; position: absolute; top: 50%; margin-top: -3px;}
+.layout > aside .main_nav > li.on::before {content: ''; width: 6px; height: 6px; border-radius: 50%;background-color: #c4d600;left: -20px; display: block; position: absolute; top: 22.5px; margin-top: -3px;}
 .layout > article {width: calc(100% - 400px);margin-left: 400px;}

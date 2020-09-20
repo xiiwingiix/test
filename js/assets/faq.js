@@ -8,7 +8,8 @@ $(window).scroll(function(e){
 	} else if (st == 0) {
 		$('.bg').slideUp(200);
 		$('header').attr('theme','light');
-	}else {
+	}
+	else {
 		// upscroll code
 		$('header').attr('theme','dark').show();
 		$('header .bg').show();

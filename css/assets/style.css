@@ -26,14 +26,15 @@ footer > .layout > .row ul.policy {align-items: flex-start;}
 
 
 /* guide.html */
-.guide aside {position: absolute;top: 9rem;bottom: 0;margin-top: 0rem;padding-top: 2.4rem;-webkit-transform: translateY(110px);-moz-transform: translateY(110px);-ms-transform: translateY(110px);-o-transform: translateY(110px); transform: translateY(110px);}
-.guide aside > ul.main_nav  {position: -webkit-sticky;position: sticky;top:0;}
+.guide .content > .layout {margin-top: 150px;}
+.guide aside > ul.main_nav{position: absolute;top: 0; transform: translateY(0);-moz-transform: translateY(0);-webkit-transform: translateY(0); transition-property: transform;transition-duration: 0.2s;}
 .guide aside > ul.main_nav > li {cursor: pointer;}
 .guide aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: #a7aeb9;}
 .guide aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
 .guide aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
 .guide aside > ul.main_nav > li > ul.sub_nav > li > a {display: block;}
 
+article {transform: translateY(0);-moz-transform: translateY(0);-webkit-transform: translateY(0);transition-property: transform;transition-duration: 0.2s;}
 article > section {padding-top: 13px;}
 article > section > div{margin-bottom: 20px;padding-top: 5px;}
 article > section > div > .update_date {color: #a7aeb9;line-height: 27px;font-size: 14px;font-weight: 300;}
