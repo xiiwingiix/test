@@ -15,11 +15,32 @@ $(document).ready(function(){
 		},
 	});
 })
+
+// $(document).ready(function(){
+// 	var lazy_load_img = $('img');
+// 	var timeout;
+//
+// 	function lazyload(){
+// 		if (timeout) {
+// 			clearTimeout(timeout);
+// 		}
+//
+// 		lazyloadThrottleTimeout = setTimeout(function() {
+// 			var scrollTop = window.scrollTop();
+// 			lazy_load_img.forEach(function(img) {
+// 				if(img.offsetTop < (window.innerHeight + scrollTop)) {
+// 					img.src = img.dataset.src;
+// 				}
+// 			});
+// 		}, 20);
+// 	}
+// });
 // scroll
 var lastScrollTop = 0;
 $(window).scroll(function(){
 	var scroll_top 	= $(this).scrollTop();
 	var offset 		= $('aside').offset().top;
+	var lazyloadtimeout;
 
 	if (scroll_top > 0) {
 		$('header').hide();
@@ -41,8 +62,21 @@ $(window).scroll(function(){
 			$('.main_nav > li.on').removeClass('on');
 			$('.main_nav > li.'+target_class).addClass('on');
 		}
+	});
 
-});
+	if (lazyloadtimeout) {
+		clearTimeout(lazyloadtimeout);
+	}
+
+	lazyloadtimeout = setTimeout(function() {
+		$('.lazy').each(function(index, item){
+			if(($(window).innerHeight() + scroll_top) > $(this).offset().top){
+				var img_src = $(this).attr('data-src');
+				$(this).attr('src', img_src);
+			}
+		});
+	}, 200);
+
 	return false;
 });
 
@@ -75,10 +109,25 @@ function goto($hashtag){
 	document.location = "/html/guide.html" + $hashtag;
 }
 
-$(document).on('mouseenter','.colors_guide > li', function(){
-	$(this).closest('.colors_guide').find('li').removeClass('on');
-	$(this).addClass('on');
 
+
+
+// img slider
+$(document).on('input', '[name="img_slider"]', function(){
+	var target 	= $(this).siblings('.img_slider');
+	var total_w	= target.width();
+	var img_w 	= total_w * (1- $(this).val() / 100 );
+
+	$('.guide_line').css('width',img_w);
+
+	return false;
+});
+
+
+// tab
+$(document).on('click','.tab li', function(){
+	$(this).closest('.tab').find('.on').removeClass('on');
+	$(this).addClass('on');
 
 	return false;
 });
