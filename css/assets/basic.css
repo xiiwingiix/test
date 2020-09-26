@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* reset */
-* {margin: 0;padding: 0;box-sizing: border-box;}
+* {margin: 0;padding: 0;box-sizing: border-box;word-break: keep-all;}
 li {list-style: none;}
 a {text-decoration: none;color: inherit;}
 img {width: 100%;}
@@ -24,7 +24,9 @@ p {margin-bottom: 50px;width: 65%;line-height: 2;font-size: 20px;}
 .bg_pink {background-color: #ff5869}
 .bg_lime {background-color: #c4d600}
 
-/* color */
+/* font */
+.Godo{font-family: 'Godo';}
+
 .em {color: #c4d600;}
 .color_gray {color : #a7aeb9;} /* #f0f0f1 tone down color */
 
@@ -60,3 +62,8 @@ input[type=range]:focus::-ms-fill-lower {background: none;}input[type=range]:foc
 .layout > aside .main_nav > li {position: relative; cursor: pointer;}
 .layout > aside .main_nav > li.on::before {content: ''; width: 6px; height: 6px; border-radius: 50%;background-color: #c4d600;left: -20px; display: block; position: absolute; top: 22.5px; margin-top: -3px;}
 .layout > article {width: calc(100% - 400px);margin-left: 400px;}
+
+/* txt contnet */
+div.txt-content > .layout {padding: 192px 0; text-align: right;}
+div.txt-content > .layout > article {text-align: left;}
+div.txt-content > .layout > article > h4{margin-top:0;}
