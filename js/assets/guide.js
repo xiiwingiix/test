@@ -16,26 +16,7 @@ $(document).ready(function(){
 	});
 })
 
-// $(document).ready(function(){
-// 	var lazy_load_img = $('img');
-// 	var timeout;
-//
-// 	function lazyload(){
-// 		if (timeout) {
-// 			clearTimeout(timeout);
-// 		}
-//
-// 		lazyloadThrottleTimeout = setTimeout(function() {
-// 			var scrollTop = window.scrollTop();
-// 			lazy_load_img.forEach(function(img) {
-// 				if(img.offsetTop < (window.innerHeight + scrollTop)) {
-// 					img.src = img.dataset.src;
-// 				}
-// 			});
-// 		}, 20);
-// 	}
-// });
-// scroll
+
 var lastScrollTop = 0;
 $(window).scroll(function(){
 	var scroll_top 	= $(this).scrollTop();

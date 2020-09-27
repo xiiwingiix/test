@@ -90,14 +90,13 @@ section > div > div.summary > div > ul > li > div.num {margin-bottom: 5.5rem;lin
 section > div > div.summary > div > ul > li > p {line-height: 9rem;font-size: 9rem; font-weight: 600;}
 
 section > div > ul.colors_guide {-webkit-box-orient: horizontal;-webkit-box-direction: normal;flex-direction: row;margin-right: -1.2rem;margin-left: -1.2rem;}
-section > div > ul.colors_guide > li {overflow: hidden;height: 42rem;transition-timing-function: cubic-bezier(0.33, 0, 0, 1);transition-delay: 0.125s;flex-shrink: 1;-webkit-box-flex: 1;flex-grow: 1;flex-basis: 50%;transition-duration: 0.5s;margin: 1.2rem;flex-basis: 16.6667%;}
-section > div > ul.colors_guide > li.green {background-color: var(--green)}
-section > div > ul.colors_guide > li.yellow {background-color: var(--yellow)}
-section > div > ul.colors_guide > li.red {background-color: var(--red)}
-section > div > ul.colors_guide > li.brown {background-color: var(--brown)}
-section > div > ul.colors_guide > li.orange {background-color: var(--orange)}
-section > div > ul.colors_guide > li.purple {background-color: var(--purple)}
-section > div > ul.colors_guide > li > div {visibility: hidden;opacity: 0;transition: transform 0.65s,visibility 0s, opacity 0.5s linear;height: 100%;transform: translateX(-105%);position: relative;padding: 1.2rem;white-space: nowrap;transition-timing-function: cubic-bezier(0.33, 0, 0, 1);-webkit-transition-property: all;-moz-transition-property: all;transition-property: all;transition-delay: 0.65s;transition-duration: 0.325s;}
+section > div > ul.colors_guide > li {overflow: hidden;height: 42rem;transition-timing-function: cubic-bezier(0.33, 0, 0, 1);transition-delay: 0.125s;flex-shrink: 1;-webkit-box-flex: 1;flex-grow: 1;flex-basis: 50%;transition-duration: 0.5s;margin: 1.2rem;flex-basis: 16.6667%;outline: 1px solid #F0F0F1;}
+section > div > ul.colors_guide > li.skyblue {background-color: #8BBEE8;}
+section > div > ul.colors_guide > li.gray {background-color: #DBE2E9 }
+section > div > ul.colors_guide > li.cool_gray {background-color: #D0D0CE}
+section > div > ul.colors_guide > li.tonedown_gray {background-color: #75787B}
+section > div > ul.colors_guide > li.blue {background-color: #0C2340;}
+section > div > ul.colors_guide > li > div {visibility: hidden;opacity: 0;transition: transform 0.65s,visibility 0s, opacity 0.5s linear;height: 100%;transform: translateX(-105%);position: relative;padding: 1.2rem;white-space: nowrap;transition-timing-function: cubic-bezier(0.33, 0, 0, 1);-webkit-transition-property: all;-moz-transition-property: all;transition-property: all;transition-delay: 0.65s;transition-duration: 0.325s; }
 section > div > ul.colors_guide > li > div > h5 {line-height: 2.7rem;font-size: 1.8rem;}
 section > div > ul.colors_guide > li > div > ul {position: absolute;bottom: 0;margin: 0.8em 0;line-height: 2.7rem;font-size: 1.8rem;}
 section > div > ul.colors_guide > li.on {flex-basis: 50%;}
