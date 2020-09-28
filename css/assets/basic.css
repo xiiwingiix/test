@@ -32,10 +32,12 @@ p {margin-bottom: 50px;width: 65%;line-height: 2;font-size: 20px;}
 
 .em {color: #c4d600;}
 .color_gray {color : #a7aeb9;} /* #f0f0f1 tone down color */
+.color_blue {color : #101820;}
 
 /* space */
 .display_flex {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
 .mt12 {margin-top: 1.2rem;}
+.pa10{padding:10px;}.pa50{padding:50px;}.pa100{padding:100px;}
 .pb25 {padding-bottom: 25%;} .pb50 {padding-bottom: 50%;} .pb100 {padding-bottom: 100%;}
 hr {border:none; border-bottom: 1px solid rgb(78, 84, 91);}
 
