@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	auto_slide_banner('.auto_slide_banner', 'left')
+	auto_slide_banner('.auto_slide_banner', 'left');
 });
 
 function auto_slide_banner(selector, direction) {

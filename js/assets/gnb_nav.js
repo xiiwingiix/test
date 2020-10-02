@@ -55,8 +55,10 @@ $(document).on('click','.btn_go_home', function(){
 
 // scroll 시 header
 var lastScrollTop = 0;
-var theme = $('header').attr('theme');
-var theme_contrast = theme == 'light'? 'dark' : 'light';
+var bd_theme = $('body').attr('theme');
+var hd_theme = $('header').attr('theme');
+var hd_theme_contrast = hd_theme == 'light'? 'dark' : 'light';
+var doc_name = $('body').attr('class');
 
 $(window).scroll(function(e){
 
@@ -65,13 +67,22 @@ $(window).scroll(function(e){
 	if (st > lastScrollTop){
 		// downscroll code
 		$('header').hide();
+		$('aside > ul').removeClass('on_header');
 	} else if (st == 0) {
 		$('.bg').slideUp(200);
-		$('header').attr('theme', theme);
+		$('header').attr('theme', hd_theme);
+		$('aside > ul').removeClass('on_header');
 	} else {
 		// upscroll code
-		$('header').attr('theme',theme_contrast).show();
+		if (bd_theme == 'light'){
+			$('header').attr('theme', hd_theme_contrast).show();
+		} else {
+			$('header').show();
+		}
+		$('aside > ul').addClass('on_header');
 		$('header .bg').show();
 	}
 	lastScrollTop = st;
+
+	return false;
 });

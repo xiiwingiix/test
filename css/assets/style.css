@@ -1,42 +1,19 @@
 @charset "utf-8";
 
-/* header */
-header {position: fixed;top: 0;width: 100%;height: 90px;z-index: 1;/*border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);*/}
-header > div.layout {position: static; height: 100%;}
-header > div.layout > div.grid {height: 100%; display: flex; position: relative;z-index: 1}
-header > div.layout > div.bg {position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: #0c2340;display: none;}
-/* header[theme="light"] > div.layout > div.grid {color:#0c2340; }
-header[theme="dark"] > div.layout > div.grid {color:#F0F0F1; } */
-header[theme="dark"]  {background-color: #0c2340; }
-header[theme="light"] .cls-1 {fill: #0c2340;}
-header[theme="dark"] .cls-1 {fill: #F0F0F1;}
-header[theme="light"] ul.category > li {color: #0c2340;}
-header[theme="dark"] ul.category > li {color: #F0F0F1;}
-header div.logo {height: 100%; align-items: center;}
-header ul.category {position: absolute;top: 0;width: 100%;height: 100%;align-items: center;flex-direction: row;-webkit-box-pack: end;-webkit-box-orient: horizontal;-webkit-box-direction: normal;justify-content: flex-end;font-size: 18px;}
-header ul.category > li{margin-left: 28px;font-weight: 600;cursor: pointer;font-family: 'Godo';}
-
-/* footer */
-footer {padding: 25px 0 30px; color: #a7aeb9}
-footer > .layout > .row {overflow: hidden; font-size: 10px;}
-footer > .layout > .row > :first-child{float: left;}
-footer > .layout > .row > :last-child{float: right;}
-footer > .layout > .row + .row {margin-top: 15px;}
-footer > .layout > .row ul{display: flex;}
-footer > .layout > .row ul.sns{align-items: flex-end; height: 36px; }
-footer > .layout > .row ul > li {margin-left: 15px; line-height: 1; cursor: pointer;}
-footer > .layout > .row ul.sns > li:hover {color: #F0F0F1}
-footer > .layout > .row ul.policy {align-items: flex-start;}
-
 /* brand-story */
-.banner-top,
-.banner-bottom {position: relative; overflow: hidden; padding-bottom: 66%; width: 100%;}
-.banner-bottom {margin-top: 200px;}
-.banner {width: 50%;padding-bottom: 33%;background-position: center;background-size: cover; position: absolute; }
+.brand-story .content_head {margin-top:0; overflow: hidden; width: 100%;height: 100vh;min-height: 40vw;}
+.brand-story .content_head > .lazy_loading_txt{width: 50%; float: left; height: 100%;display: flex; align-items: center;}
+.brand-story .content_head > .lazy_loading_txt > ul > li{width: 750px;float: right;font-size: 130px;font-family: godo;font-weight: bold;}
+.brand-story .content_head > .lazy_loading_img{width: 50%; float: left; background-image: url(/img/brand-story/ourBrandStory.jpg); height: 100%;}
+.brand-story .banner-top,
+.brand-story .banner-bottom {position: relative; overflow: hidden; padding-bottom: 66%; width: 100%;}
+.brand-story .banner-bottom {margin-top: 200px;}
+.brand-story .banner {width: 50%;padding-bottom: 33%;background-position: center;background-size: cover; position: absolute; }
 
 /* guide.html */
 .guide .content > .layout {margin-top: 150px;}
 .guide aside > ul.main_nav{position: absolute;top: 0; transform: translateY(0);-moz-transform: translateY(0);-webkit-transform: translateY(0); transition-property: transform;transition-duration: 0.2s;}
+.guide aside > ul.main_nav.on_header{transform: translateY(90px);-moz-transform: translateY(90px);-webkit-transform: translateY(90px);}
 .guide aside > ul.main_nav > li {cursor: pointer;}
 .guide aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: #a7aeb9;}
 .guide aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
@@ -62,7 +39,6 @@ section > div ul.img_list.img_3 > li{width: calc(33.33% - 64px);}
 section > div ul.img_list.img_4 > li{width: calc(25% - 64px);}
 section > div ul.img_list.img_5 > li{width: calc(20% - 64px);}
 section > div ul.img_list.img_6 > li{width: calc(16.66% - 64px);}
-/* section > div ul.img_list > li > div.txt{line-height: 22px;font-size: 15px;margin-top: 15px;margin-bottom: 0;font-weight:300;} */
 section > div ul.img_list > li > div.mark_x{font-size: 25px;color: #ff001f;line-height: 27px;font-weight: bold;margin-bottom: 12px;}
 section > div ul.img_list > li > p.lar{margin-top: 16px;line-height: 22px;}
 
