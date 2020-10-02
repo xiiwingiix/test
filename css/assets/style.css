@@ -7,6 +7,7 @@ header > div.layout > div.grid {height: 100%; display: flex; position: relative;
 header > div.layout > div.bg {position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: #0c2340;display: none;}
 /* header[theme="light"] > div.layout > div.grid {color:#0c2340; }
 header[theme="dark"] > div.layout > div.grid {color:#F0F0F1; } */
+header[theme="dark"]  {background-color: #0c2340; }
 header[theme="light"] .cls-1 {fill: #0c2340;}
 header[theme="dark"] .cls-1 {fill: #F0F0F1;}
 header[theme="light"] ul.category > li {color: #0c2340;}

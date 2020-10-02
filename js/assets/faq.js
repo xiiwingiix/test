@@ -2,25 +2,6 @@ $(document).ready(function(){
 	$('header').attr('theme', 'light');
 });
 
-// scroll 시 header
-var lastScrollTop = 0;
-$(window).scroll(function(e){
-	var st = $(this).scrollTop();
-	if (st > lastScrollTop){
-		// downscroll code
-		$('header').hide();
-	} else if (st == 0) {
-		$('.bg').slideUp(200);
-		$('header').attr('theme','light');
-	}
-	else {
-		// upscroll code
-		$('header').attr('theme','dark').show();
-		$('header .bg').show();
-	}
-	lastScrollTop = st;
-});
-
 // 검색 focus
 $(document).on('focus','[name="search_faq"]', function(){
 	$('.ico_search').css('color','#c4d600');

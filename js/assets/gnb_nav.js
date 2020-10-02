@@ -23,6 +23,8 @@ nav_ele += ('</div>');
 
 document.write(nav_ele);
 
+
+
 $(document).ready(function(){
 	// 카테고리 색상 변경
 	$('.category a.on').removeClass('em');
@@ -46,8 +48,30 @@ $(document).ready(function(){
 
 // 홈으로
 $(document).on('click','.btn_go_home', function(){
-	console.log('ghadmfh')
 	location.href="/index.html";
 
 	return false;
+});
+
+// scroll 시 header
+var lastScrollTop = 0;
+var theme = $('header').attr('theme');
+var theme_contrast = theme == 'light'? 'dark' : 'light';
+
+$(window).scroll(function(e){
+
+	var st = $(this).scrollTop();
+
+	if (st > lastScrollTop){
+		// downscroll code
+		$('header').hide();
+	} else if (st == 0) {
+		$('.bg').slideUp(200);
+		$('header').attr('theme', theme);
+	} else {
+		// upscroll code
+		$('header').attr('theme',theme_contrast).show();
+		$('header .bg').show();
+	}
+	lastScrollTop = st;
 });

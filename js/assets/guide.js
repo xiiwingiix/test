@@ -27,16 +27,16 @@ $(window).scroll(function(){
 	var offset 		= $('aside').offset().top;
 	var lazyloadtimeout;
 
-	if (scroll_top > 0) {
-		$('header').hide();
-
-		if (scroll_top > offset){
-			$('aside > ul').css('position','fixed');
-		}
-	}  else {
-		$('header').slideDown(20);
-		$('aside > ul').css('position','absolute');
-	}
+	// if (scroll_top > 0) {
+	// 	$('header').hide();
+	//
+	// 	if (scroll_top > offset){
+	// 		$('aside > ul').css('position','fixed');
+	// 	}
+	// }  else {
+	// 	$('header').slideDown(20);
+	// 	$('aside > ul').css('position','absolute');
+	// }
 
 	$('section').each(function(index, item){
 		var target 		= $(this),
@@ -114,9 +114,7 @@ $(document).on('click','.sub_nav a', function(){
 	return false;
 });
 
-function goto($hashtag){
-	document.location = "/html/guide.html" + $hashtag;
-}
+
 
 // img slider
 $(document).on('input', '[name="img_slider"]', function(){
