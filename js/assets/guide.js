@@ -16,6 +16,8 @@ $(document).ready(function(){
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+	$('header').attr('theme','dark');
 })
 
 
@@ -37,8 +39,8 @@ $(window).scroll(function(){
 	}
 
 	$('section').each(function(index, item){
-		var target = $('section').eq(index),
-			target_top = target.offset().top,
+		var target 		= $(this),
+			target_top 	= target.offset().top,
 			target_class = target.attr('class');
 
 		if (target_top < scroll_top){
@@ -46,6 +48,17 @@ $(window).scroll(function(){
 			$('.main_nav > li.'+target_class).addClass('on');
 		}
 	});
+
+	$('section > div').each(function(index, item){
+		var target 		= $(this),
+			target_top 	= target.offset().top,
+			target_id 	= target.attr('id');
+
+		if (target_top < scroll_top){
+			$('.sub_nav > li.on').removeClass('on');
+			$('.sub_nav [href="#'+target_id+'"]').closest('li').addClass('on');
+		}
+	})
 
 	if (lazyloadtimeout) {
 		clearTimeout(lazyloadtimeout);
@@ -119,8 +132,8 @@ $(document).on('input', '[name="img_slider"]', function(){
 
 // tab
 $(document).on('click','.tab li', function(){
-	var bSel_grid = $(this).closest('.tab').hasClass('sel_grid');
-	var bsel_frame = $(this).closest('.tab').hasClass('sel_frame');
+	var bSel_grid 	= $(this).closest('.tab').hasClass('sel_grid');
+	var bsel_frame 	= $(this).closest('.tab').hasClass('sel_frame');
 
 	$(this).closest('.tab').find('.on').removeClass('on');
 	$(this).addClass('on');

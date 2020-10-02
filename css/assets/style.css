@@ -5,8 +5,12 @@ header {position: fixed;top: 0;width: 100%;height: 90px;z-index: 1;/*border-bott
 header > div.layout {position: static; height: 100%;}
 header > div.layout > div.grid {height: 100%; display: flex; position: relative;z-index: 1}
 header > div.layout > div.bg {position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: #0c2340;display: none;}
-header[theme="light"] > div.layout > div.grid {color:#0c2340; }
-header[theme="dark"] > div.layout > div.grid {color:#F0F0F1; }
+/* header[theme="light"] > div.layout > div.grid {color:#0c2340; }
+header[theme="dark"] > div.layout > div.grid {color:#F0F0F1; } */
+header[theme="light"] .cls-1 {fill: #0c2340;}
+header[theme="dark"] .cls-1 {fill: #F0F0F1;}
+header[theme="light"] ul.category > li {color: #0c2340;}
+header[theme="dark"] ul.category > li {color: #F0F0F1;}
 header div.logo {height: 100%; align-items: center;}
 header ul.category {position: absolute;top: 0;width: 100%;height: 100%;align-items: center;flex-direction: row;-webkit-box-pack: end;-webkit-box-orient: horizontal;-webkit-box-direction: normal;justify-content: flex-end;font-size: 18px;}
 header ul.category > li{margin-left: 28px;font-weight: 600;cursor: pointer;font-family: 'Godo';}
@@ -35,7 +39,7 @@ footer > .layout > .row ul.policy {align-items: flex-start;}
 .guide aside > ul.main_nav > li {cursor: pointer;}
 .guide aside > ul.main_nav > li > ul.sub_nav {margin-left: 24px;display: none;font-weight: 400;color: #a7aeb9;}
 .guide aside > ul.main_nav > li > ul.sub_nav > li{cursor: pointer;}
-.guide aside > ul.main_nav > li > ul.sub_nav > li.on {color: var(--white);}
+.guide aside > ul.main_nav > li > ul.sub_nav > li.on {color: #F0F0F1;}
 .guide aside > ul.main_nav > li > ul.sub_nav > li > a {display: block;}
 
 article {transform: translateY(0);-moz-transform: translateY(0);-webkit-transform: translateY(0);transition-property: transform;transition-duration: 0.2s;}
@@ -44,7 +48,7 @@ article > section > div{margin-bottom: 20px;padding-top: 5px;}
 article > section > div > .sub_tit {color: #a7aeb9;line-height: 27px;font-size: 14px;font-weight: 300;}
 article > section > div ul > li > img{border: 1px solid rgb(38, 49, 57);vertical-align: bottom;}
 article > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 12px;line-height: 33px;font-size: 22px;}
-article > section > div ul > li > p{width: 100%;margin-top: 12px;line-height: 22px; font-size:16px;}
+article > section > div ul > li > p{width: 100%;margin-top: 12px;margin-bottom: 0;line-height: 22px; font-size:16px;}
 
 
 section > div ul.img_list {margin-right: -32px;margin-top: 32px;margin-left: -32px;display: flex;display: -webkit-flex;flex-wrap: wrap;-webkit-flex-wrap: wrap;}
@@ -105,11 +109,12 @@ section > div > ul.colors_guide > li.on > div {visibility: visible;opacity: 1;tr
 
 section > div > div.swiper-container {margin-top: 6.4rem;padding-bottom: 4.8rem;}
 section > div > div.swiper-container > div.swiper-wrapper > div.swiper-slide {background-color: #0c2340;}
+section > div > div.swiper-container > div.swiper-wrapper > div.swiper-slide > h5{margin-top: 0;}
 section > div > div.swiper-container > div.swiper-wrapper > div.swiper-slide > img {width: 100%;}
 section > div > div.swiper-container > div.swiper-option {margin-top: 2.2rem;height: 1.8rem;}
 section > div > div.swiper-container > div.swiper-option > div.swiper-pagination{font-size: 1.6rem;line-height: 1;display: inline-block;float: right;position: static;width: auto;}
 section > div > div.swiper-container > div.swiper-option > div.swiper-button-next,
-section > div > div.swiper-container > div.swiper-option > div.swiper-button-prev{position: static;display: inline-block;}
+section > div > div.swiper-container > div.swiper-option > div.swiper-button-prev{position: static;display: inline-block; color: #c4d600}
 section > div > div.swiper-container > div.swiper-option > div.swiper-button-next > svg,
 section > div > div.swiper-container > div.swiper-option > div.swiper-button-prev > svg{width: 18px; height: 18px;}
 section > div > div.swiper-container > div.swiper-option > div.swiper-button-next::after,

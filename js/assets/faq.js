@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	$('header').attr('theme', 'light');
+});
+
 // scroll 시 header
 var lastScrollTop = 0;
 $(window).scroll(function(e){
