@@ -1,14 +1,51 @@
 @charset "utf-8";
 
 /* brand-story */
+.brand-story .content+.content  {margin-top:0;}
 .brand-story .content_head {margin-top:0; overflow: hidden; width: 100%;height: 100vh;min-height: 40vw;}
-.brand-story .content_head > .lazy_loading_txt{width: 50%; float: left; height: 100%;display: flex; align-items: center;}
-.brand-story .content_head > .lazy_loading_txt > ul > li{width: 750px;float: right;font-size: 130px;font-family: godo;font-weight: bold;}
-.brand-story .content_head > .lazy_loading_img{width: 50%; float: left; background-image: url(/img/brand-story/ourBrandStory.jpg); height: 100%;}
-.brand-story .banner-top,
-.brand-story .banner-bottom {position: relative; overflow: hidden; padding-bottom: 66%; width: 100%;}
-.brand-story .banner-bottom {margin-top: 200px;}
-.brand-story .banner {width: 50%;padding-bottom: 33%;background-position: center;background-size: cover; position: absolute; }
+.brand-story .content_head > .lazy_loading.txt{width: 50%; float: left; height: 100%;display: flex; align-items: center;}
+.brand-story .content_head > .lazy_loading.txt > ul > li{width: calc(100% - 192px);float: right;font-size: 130px;font-family: godo;font-weight: bold;overflow: hidden;}
+.brand-story .content_head > .lazy_loading.txt > ul > li > span{transform: translateY(150px);-moz-transform: translateY(150px);-webkit-transform: translateY(150px); transition-property: transform;transition-duration: 0.6s; display: inline-block;}
+.brand-story .content_head > .lazy_loading.txt.moved > ul > li > span{transform: translateY(0);-moz-transform: translateY(0);-webkit-transform: translateY(0);}
+.brand-story .content_head > .lazy_loading.img{width: 50%; float: left; background-image: url(/img/brand-story/ourBrandStory.jpg); height: 50%;transition-property: height;transition-duration: 0.6s; background-position: center top; background-size: 100% cover;}
+.brand-story .content_head > .lazy_loading.img.moved{height: 100%;}
+
+.brand-story .whoWeAre {padding-bottom: 192px;}
+.brand-story .whoWeAre > .txt h5 {font-size: 90px}
+.brand-story .whoWeAre > .lazy {transform: scale(0.5);opacity: 0;}
+.brand-story .whoWeAre > .lazy.fadeInScaleIn {transform-origin: 0px 0px;animation-delay: 1s;animation-duration: 1s;animation-name: fadeInScaleIn;will-change: transform;animation-fill-mode: forwards;}
+.brand-story .whoWeAre > .lazy.float_left {margin-top: 250px;}
+.brand-story .whoWeAre > .lazy.float_rifht {margin-top: 190px;}
+
+.brand-story .whoWeServe > .layout{overflow: hidden; padding-bottom: 192px;}
+.brand-story .whoWeServe > .layout h4{font-size: 90px; margin-top: 380px; line-height: 90px; }
+.brand-story .whoWeServe > .layout h5{font-size: 56px; margin-bottom: 128px;}
+.brand-story .whoWeServe > .layout h6{font-size: 45px; margin-bottom: 32px;}
+.brand-story .whoWeServe > .layout p{width: 100%;}
+
+.brand-story .watchVideo {background-image: url(/img/brand-story/video-poster-frame.jpg); background-size: cover;padding-bottom: 56.25%;position: relative;}
+.brand-story .watchVideo div.btn_show_video{width:100%; height: 100%;text-align: center; cursor: pointer;display: flex;justify-content: center;align-items: center; background-color: #0c234026; position: absolute; top:0; left: 0;right: 0;}
+.brand-story .watchVideo div.btn_show_video:hover{background-color: #0c234061}
+.brand-story .watchVideo div.txt_wrap{width:100%;}
+.brand-story .watchVideo h4 {display: inline-block;font-size: 90px;width: 50%;margin: 0;line-height: 90px;}
+.brand-story .watchVideo p {display: inline-block; font-size: 45px; margin-bottom: 0;}
+.brand-story .watchVideo span.ico_video {display: inline-block;width: 50px;height: 50px;background: rgba(255,255,255,0.5);border-radius: 50%;line-height: 1;vertical-align: middle;line-height: 30px;position: relative;margin-left: 10px;}
+.brand-story .watchVideo div.btn_show_video:hover span.ico_video {background: rgba(255,255,255,0.9);}
+.brand-story .watchVideo span.ico_video > svg {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #0c2340;}
+.brand-story .watchVideo iframe {position: absolute;top: 0;left: 0;}
+
+.brand-story .motto .layout{margin-top:192px;}
+.brand-story .motto p {font-size: 56px; line-height: 70px;margin-bottom: 128px;}
+.brand-story .motto .float_left {margin-left: calc((100% - 64px)/15*2); width:calc((100% - 64px)/15*6 + 64px);}
+.brand-story .motto .float_right {width:calc((100% - 64px)/15*6 + 64px); }
+.brand-story .motto h5 {font-size: 45px; line-height: 56px; margin-top:0;}
+.brand-story .motto p.txt {font-size: 22px; line-height: 33px;}
+
+
+.brand-story .banner > div {margin-bottom: 192px;}
+.brand-story .banner span {font-size: 0;}
+.brand-story .banner img {width: 33.3333%; padding-left: 96px; padding-right: 96px;}
+
 
 /* guide.html */
 .guide .content > .layout {margin-top: 150px;}

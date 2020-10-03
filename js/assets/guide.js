@@ -18,21 +18,21 @@ $(document).ready(function(){
 	});
 
 	$('header').attr('theme','dark');
-})
+});
 
 
 var lastScrollTop = 0;
 $(window).scroll(function(){
 	var scroll_top 	= $(this).scrollTop();
-	var offset 			= $('aside').offset().top;
+	var offset 		= $('aside').offset().top;
 	var lazyloadtimeout;
 
 	$('aside > ul').css('position', (scroll_top > offset ? 'fixed' : 'absolute'));
 
 	$('section').each(function(index, item){
-		var target 		= $(this),
-				target_top 	= target.offset().top,
-				target_class = target.attr('class');
+		var target 		 = $(this),
+			target_top 	 = target.offset().top,
+			target_class = target.attr('class');
 
 		if (target_top < scroll_top){
 			$('.main_nav > li.on').removeClass('on');

@@ -1,41 +1,97 @@
+var iframe_w, iframe_h;
+var ytube_player;
+
 $(document).ready(function(){
-	auto_slide_banner('.auto_slide_banner', 'left');
+	// 메인 문구 및 이미지
+	$('.lazy_loading').addClass('moved');
+
+	// video
+	iframe_w = $('.watchVideo').width();
+	iframe_h = $('.btn_show_video').height();
+
+	// marquee
+	marquee($('.banner-top'), 'left');
+	marquee($('.banner-bottom'), 'right');
 });
 
-function auto_slide_banner(selector, direction) {
-	var banner_interval = 0;
-	var first = 1;
-	var last;
-	var img_cnt		  = 0;
-	var banner_cnt    = $(selector+' .banner').length;
-	var $slide_banner = $(selector+' .banner');
-	var $first;
-	var $last;
 
-	$slide_banner.each(function(){
-		$(this).css(direction, bannerLeft);
-		bannerLeft += $(this).width()+5;
-		$(this).attr("id", "banner"+(++img_cnt));  // img에 id 속성 추가
+$(window).scroll(function(){
+	var scroll_top 	= $(this).scrollTop();
+
+	$('.lazy').each(function(index, item){
+		var target 		 = $(this),
+			target_top 	 = target.offset().top;
+
+		if (target_top-800 < scroll_top){
+			target.addClass('fadeInScaleIn');
+		}
 	});
 
+	return false;
+});
 
-	if( img_cnt > banner_cnt+1){
-		last = img_cnt;
 
-		setInterval(function() {
-			$img.each(function(){
-				$(this).css(direction, $(this).position().direction-1); // 1px씩 왼쪽으로 이동
-			});
-			$first = $("#banner"+first);
-			$last = $("#banner"+last);
-			if($first.position().direction < -200) {    // 제일 앞에 배너 제일 뒤로 옮김
-				$first.css("left", $last.position().left + $last.width()+5 );
-				first++;
-				last++;
-				if(last > img_cnt) { last=1; }
-				if(first > img_cnt) { first=1; }
-			}
-		}, 10000); // 숫자 : 속도 1초 == 1000
- }
 
-};
+$(document).on('click','.btn_show_video', function(){
+	$('.btn_show_video').hide();
+	$('.watchVideo').append('<div id="player"></div>');
+
+	onYouTubeIframeAPIReady();
+	
+	return false;
+});
+
+
+function marquee(selector, direction){
+	var marquee = selector;
+
+	marquee.css({"overflow": "hidden", "width": "100%"});
+
+	marquee.wrapInner("<span>");
+	marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" });
+
+	marquee.append(marquee.find("span").clone());
+
+
+	marquee.wrapInner('<div class="innerbox">');
+	marquee.find(".innerbox").css("width", "350%");
+
+	var reset = function() {
+		if (direction == 'left'){
+			$(this).css("margin-left", "0%");
+			$(this).animate({ "margin-left": '-100%' }, 40000, 'linear', reset);
+		} else {
+			$(this).css("margin-left", "-100%");
+			$(this).animate({ "margin-left": '0' }, 40000, 'linear', reset);
+		}
+	};
+
+	reset.call(marquee.find(".innerbox"));
+}
+
+function onYouTubeIframeAPIReady() {
+	ytube_player = new YT.Player('player', {
+		height: iframe_h,
+		width: iframe_w,
+		videoId: 'NiVXmLkcOiA',
+		events: {
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		}
+	});
+}
+
+function onPlayerReady(event) {
+	event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+	if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED) {
+		$('#player').remove();
+		$('.btn_show_video').show();
+	}
+
+}
+function stopVideo() {
+	ytube_player.stopVideo();
+}
