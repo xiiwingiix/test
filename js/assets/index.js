@@ -6,6 +6,16 @@ $(document).ready(function(){
 	return false;
 });
 
+$(window).on('scroll', function(){
+	if (!$('.cover').hasClass('on')) {
+		$('.cover').addClass('on');
+	}
+
+	return false;
+});
+
+
+// marquee - hover
 $(document).on('mouseover','.sld', function(){
 	banner_marquee.stop();
 	$(this).find('.txt').css('display','flex');
@@ -13,6 +23,7 @@ $(document).on('mouseover','.sld', function(){
 	return false;
 });
 
+// marquee - hover
 $(document).on('mouseout','.sld', function(){
 	banner_marquee.play();
 	$(this).find('.txt').css('display','none');

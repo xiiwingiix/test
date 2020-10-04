@@ -1,15 +1,29 @@
 @charset "utf-8";
 
 /* index */
-.index .main {position: relative;}
-.index .main .cover {width: 100%;position: absolute;left: 0;right: 0;top: 0;background-color: #fff; overflow: hidden; height: 100%;}
-.index .main .txt_wrap {z-index: 1;}
+.index .main {position: relative; margin-top:0; height: 100vh;min-height: 782px;/*.txt_wrap height 654px + 128px*/}
+.index .main .cover { position: absolute;left: 0;right: 0;top: 0;overflow: hidden; height: 100%; padding-top:90px;z-index: 0;}
+.index .main .txt_wrap {z-index: 2;}
 .index .main .txt_wrap span{display: block;font-size: 180px; line-height: 180px;}
-.index .main .Presentation {position: absolute;top: 0;left: 0;z-index: 0;}
+.index .main .Presentation {position: absolute;top: 0;left: 0;z-index: 1;
+	will-change:opacity,transform;
+	animation-timing-function: linear;
+	animation-duration: 20s;
+	animation-name: launchUpward;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	transform: translateY(100%);
+}
 .index .main .Presentation img:nth-child(1) {width: 39vw; padding-top: 66.33333333333333%;}
 .index .main .Presentation img:nth-child(2) {width: 25vw; padding-top: 66.33333333333333%;}
 .index .main .Presentation img:nth-child(3) {width: 25vw; padding-top: 55.27777777777778%}
 .index .main .Presentation img:nth-child(4) {width: 38vw; padding-top: 66.91666666666667%}
+.index .main .cover.on .Presentation {opacity: 0;}
+.index .main .white_bg {background-color: #fff;width: 100%;position: absolute;left: 0;right: 0;top: 0; z-index: 0; display: block; height: 100%;will-change: left, width, height;
+-webkit-transition: left 1.2s cubic-bezier(0.19, 1, 0.22, 1), width 1.2s cubic-bezier(0.19, 1, 0.22, 1), height 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+-moz-transition: left 1.2s cubic-bezier(0.19, 1, 0.22, 1), width 1.2s cubic-bezier(0.19, 1, 0.22, 1), height 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+transition: left 1.2s cubic-bezier(0.19, 1, 0.22, 1), width 1.2s cubic-bezier(0.19, 1, 0.22, 1), height 1.2s cubic-bezier(0.19, 1, 0.22, 1);}
+.index .main .cover.on .white_bg {width: calc(100% - 256px); height: calc(100% - 128px);min-height: 654px;/*.txt_wrap height 654px*/left:128px;}
 
 .index .guide > div {width:calc((100% - 64px)/15*6 + 64px); }
 .index .guide h5 {font-size: 90px; line-height: 90px; display: inline-block;}
