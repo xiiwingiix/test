@@ -10,8 +10,8 @@ $(document).ready(function(){
 	iframe_h = $('.btn_show_video').height();
 
 	// marquee
-	marquee($('.banner-top'), 'left');
-	marquee($('.banner-bottom'), 'right');
+	marquee($('.banner-top'), 'left', 40000);
+	marquee($('.banner-bottom'), 'right', 40000);
 });
 
 
@@ -37,7 +37,7 @@ $(document).on('click','.btn_show_video', function(){
 	$('.watchVideo').append('<div id="player"></div>');
 
 	onYouTubeIframeAPIReady();
-	
+
 	return false;
 });
 

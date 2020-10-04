@@ -64,16 +64,14 @@ $(window).scroll(function(e){
 
 	var st = $(this).scrollTop();
 
-	if (st > lastScrollTop){
-		// downscroll code
+	if (st > lastScrollTop){	// downscroll code
 		$('header').hide();
 		$('aside > ul').removeClass('on_header');
 	} else if (st == 0) {
 		$('.bg').slideUp(200);
 		$('header').attr('theme', hd_theme);
 		$('aside > ul').removeClass('on_header');
-	} else {
-		// upscroll code
+	} else {	// upscroll code
 		if (bd_theme == 'light'){
 			$('header').attr('theme', hd_theme_contrast).show();
 		} else {

@@ -1,5 +1,36 @@
 @charset "utf-8";
 
+/* index */
+.index .main {position: relative;}
+.index .main .cover {width: 100%;position: absolute;left: 0;right: 0;top: 0;background-color: #fff; overflow: hidden; height: 100%;}
+.index .main .txt_wrap {z-index: 1;}
+.index .main .txt_wrap span{display: block;font-size: 180px; line-height: 180px;}
+.index .main .Presentation {position: absolute;top: 0;left: 0;z-index: 0;}
+.index .main .Presentation img:nth-child(1) {width: 39vw; padding-top: 66.33333333333333%;}
+.index .main .Presentation img:nth-child(2) {width: 25vw; padding-top: 66.33333333333333%;}
+.index .main .Presentation img:nth-child(3) {width: 25vw; padding-top: 55.27777777777778%}
+.index .main .Presentation img:nth-child(4) {width: 38vw; padding-top: 66.91666666666667%}
+
+.index .guide > div {width:calc((100% - 64px)/15*6 + 64px); }
+.index .guide h5 {font-size: 90px; line-height: 90px; display: inline-block;}
+.index .guide [class*="float"] h5 {font-size: 56px;}
+.index .guide [class*="float"] h5~h5 {margin-top:0;}
+.index .guide p {width: 100%;}
+.index .guide .float_right li {border-bottom: 1px solid #D0D0CE;padding: 10px 50px 10px 0;position: relative;}
+.index .guide .float_right h5 {font-size: 30px;}
+.index .guide .float_right h6 {font-size: 22px; line-height: 37.5px; margin-bottom: 0; font-weight: normal;}
+.index .guide .float_right p {font-size: 16px; line-height: 24px; margin-bottom: 0; font-weight: 300;}
+.index .guide .float_right svg {position: absolute;right: 0;top: 50%;transform: translateY(-50%); color: #004EA8; width: 18px;}
+.index .guide .float_right + div p {font-size: 45px;}
+
+.index .banner .wrapper {font-size: 0;}
+.index .banner div {font-size: 30px; display: inline-block;width: calc(33.3333% - 192px); position: relative;margin-left: 96px; margin-right: 96px;}
+.index .banner img {vertical-align: top;}
+.index .banner .txt {position: absolute; top:0; left: 0; width: 100%; height: 100%;justify-content: center; align-items: center; background-color: rgba(0,0,0,0.5); color: #fff;display: none;}
+.index .banner .on + .txt {display: flex;}
+
+
+
 /* brand-story */
 .brand-story .content+.content  {margin-top:0;}
 .brand-story .content_head {margin-top:0; overflow: hidden; width: 100%;height: 100vh;min-height: 40vw;}
@@ -41,10 +72,10 @@
 .brand-story .motto h5 {font-size: 45px; line-height: 56px; margin-top:0;}
 .brand-story .motto p.txt {font-size: 22px; line-height: 33px;}
 
-
 .brand-story .banner > div {margin-bottom: 192px;}
 .brand-story .banner span {font-size: 0;}
 .brand-story .banner img {width: 33.3333%; padding-left: 96px; padding-right: 96px;}
+/* //brand-story */
 
 
 /* guide.html */
@@ -64,7 +95,6 @@ article > section > div > .sub_tit {color: #a7aeb9;line-height: 27px;font-size: 
 article > section > div ul > li > img{border: 1px solid rgb(38, 49, 57);vertical-align: bottom;}
 article > section > div ul > li > h5{margin-top: 0rem;margin-bottom: 12px;line-height: 33px;font-size: 22px;}
 article > section > div ul > li > p{width: 100%;margin-top: 12px;margin-bottom: 0;line-height: 22px; font-size:16px;}
-
 
 section > div ul.img_list {margin-right: -32px;margin-top: 32px;margin-left: -32px;display: flex;display: -webkit-flex;flex-wrap: wrap;-webkit-flex-wrap: wrap;}
 section > div ul.img_list > h5 {width: 100%;margin: 0;margin-right: 32px;margin-left: 32px;margin-top: 0rem;margin-bottom: 12px;line-height: 33px;font-size: 22px;}
