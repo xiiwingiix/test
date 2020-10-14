@@ -1,3 +1,5 @@
+var window_w = $(window).width();
+
 function goto($hashtag){
 	document.location = '/html/guide.html' + $hashtag;
 }
@@ -48,4 +50,50 @@ function Marquee (selector, direction, speed){
 	if (selector){
 		this.create();
 	}
+}
+
+//공통 알럿
+function popAlert(title, text, action) {
+	$('.pop pop_alert').remove();
+	var ele = "";
+
+	ele += ('<div class="pop pop_alert">');
+	ele += ('	<div class="pop_wrap">');
+	ele += ('		<div class="pop_top">' + title+ '</div>');
+	ele += ('		<div class="pop_body">' + text +'</div>');
+	ele += ('		<div class="pop_bottom mt20">');
+	ele += ('			<a href="" class="pop_alt_close">닫기</a>');
+	ele += ('		</div>');
+	ele += ('	</div>');
+	ele += ('</div>');
+
+	$('body').append(ele);
+
+	$('.pop_alert').show(1, popupToCenter);
+	$('body').addClass('pop_fix');
+
+	$('.pop_alt_close').click(function() {
+		if (action) {
+			action();
+		}
+
+		$('.pop_alert').remove();
+		$('body').removeClass('pop_fix');
+
+		return false;
+	});
+}
+
+//팝업 센터 맞추기
+function popupToCenter() {
+
+	$('.pop .pop_wrap').each(function(){
+		var marginTop = $(this).outerHeight()/2;
+		if ($(this).outerHeight() > $(window).height()) {
+			marginTop = $(window).height()/2;
+		}
+		$(this).css({"margin-left":-$(this).outerWidth()/2,"margin-top":-marginTop});
+	});
+
+	return false;
 }

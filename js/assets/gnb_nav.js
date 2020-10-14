@@ -11,9 +11,13 @@ nav_ele += ('		</div>');
 
 // <!-- category -->
 nav_ele += ('		<ul class="category display_flex">');
-nav_ele += ('			<li><a href="/html/brand-story.html">Brand story</a></li>');
-nav_ele += ('			<li><a href="/html/guide.html">Design Guideline</a></li>');
-nav_ele += ('			<li><a href="/html/faq.html">Help / FAQ</a></li>');
+// 수정 : 201013
+nav_ele += ('			<li><a href="/html/brand-story.html" class="btn_upcoming">Brand story</a></li>');
+// nav_ele += ('			<li><a href="/html/guide.html">Design Guideline</a></li>');
+nav_ele += ('			<li><a href="/index.html">Design Guideline</a></li>');
+nav_ele += ('			<li><a href="/html/faq.html" class="btn_upcoming">Help / FAQ</a></li>');
+// 수정 : 201013 - end
+
 nav_ele += ('		</ul>');
 // <!-- //category -->
 
@@ -26,6 +30,17 @@ document.write(nav_ele);
 
 
 $(document).ready(function(){
+	if (window_w < 900){
+		var menu_ico_el = '' ;
+
+		menu_ico_el += '<div class="ico_menu btn_menu">';
+		menu_ico_el += '	<div class="top"></div>';
+		menu_ico_el += '	<div class="bottom"></div>';
+		menu_ico_el += '</div>';
+
+		$('.logo').parent().append(menu_ico_el);
+	}
+
 	// 카테고리 색상 변경
 	$('.category a.on').removeClass('em');
 	$('.category a').each(function(){
@@ -66,21 +81,40 @@ $(window).scroll(function(e){
 
 	if (st > lastScrollTop){	// downscroll code
 		$('header').hide();
-		$('aside > ul').removeClass('on_header');
+		$('aside').removeClass('on_header');
 	} else if (st == 0) {
-		$('.bg').slideUp(200);
-		$('header').attr('theme', hd_theme);
-		$('aside > ul').removeClass('on_header');
+		if (window_w > 1200){
+			$('header').attr('theme', hd_theme);
+			$('.bg').slideUp(200);
+		}
+		$('aside').removeClass('on_header');
 	} else {	// upscroll code
 		if (bd_theme == 'light'){
 			$('header').attr('theme', hd_theme_contrast).show();
 		} else {
 			$('header').show();
 		}
-		$('aside > ul').addClass('on_header');
+		$('aside').addClass('on_header');
 		$('header .bg').show();
 	}
 	lastScrollTop = st;
 
 	return false;
 });
+
+$(document).on('click','.btn_menu', function(){
+	var is_open = $(this).hasClass('on');
+
+	if (is_open){
+		$(this).removeClass('on');
+	} else {
+		$(this).addClass('on');
+	}
+
+	return false;
+});
+
+$(document).on('click', '.btn_upcoming', function(){
+	popAlert('','작업 준비 중입니다.');
+	return false;
+})
