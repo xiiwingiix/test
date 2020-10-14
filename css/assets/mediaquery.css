@@ -40,6 +40,7 @@
 	div.txt-content > .layout > article {width: calc((100% - (64px*15))/16*12 + 64px*11); margin-left: calc((100% - (64px*15))/16*2 + 64px*2); }
 
 	/* guide */
+	section > div ul.img_list.img_6 > li{width: calc(25% - 64px);}
 	section > div > div.swiper-container {margin-top: 32px;padding-bottom: 24px;}
 
 	/* faq */
@@ -52,8 +53,9 @@
 
 @media screen and (max-width: 900px){
 	/* basic */
-	h4 {font-size: 30px;}
-	p {font-size: 18px; line-height: 1.8;}
+	h4 {font-size: 24px;}
+	h5 {margin-bottom: 12px;font-size: 18px; margin-top: 24px;}
+	p {font-size: 18px; line-height: 1.8; width: 100%;}
 
 	.btn {font-size: 18px; line-height: 45px; height: 45px;}
 
@@ -71,6 +73,20 @@
 
 	.mk_grid {width: calc(100% - 192px);-ms-grid-column-gap: 32px;grid-column-gap: 32px;-ms-grid-template-columns: repeat(6, 1fr);grid-template-columns: repeat(6, 1fr);}
 
+	/* guide */
+	article > section > div ul > li > p{font-size:12px;}
+
+	section > div ul.img_list.img_3 > li{width: calc(50% - 64px);}
+	section > div ul.img_list.img_4 > li{width: calc(50% - 64px);}
+	section > div ul.img_list.img_5 > li{width: calc(33.3333% - 64px);}
+
+	section > div > ul.zoom_img {display: block;}
+	section > div > ul.zoom_img > li.zoom_target {margin-right: 0;width: 100%; margin-bottom: 24px;}
+	section > div > ul.zoom_img > li.zoom_target + li {margin-left: 0;width: calc(100% + 24px);margin-left: -12px;overflow: hidden;}
+	section > div > ul.zoom_img > li.zoom_target + li > img{width: calc(25% - 24px); margin-right: 12px; margin-left: 12px;}
+	section > div > ul.zoom_img > li.zoom_target + li > img:nth-child(1){margin-left: 12px;}
+
+
 	/* faq */
 	.faq .search_form {margin: 108px 0 32px;line-height:50px;}
 	.faq .search_form > svg {width: 30px; height: 30px;}
@@ -79,3 +95,44 @@
 
 }
 /* //max 900px */
+
+@media screen and (max-width: 600px){
+	h1 {font-size: 58px; margin-bottom: 24px;}
+	h4 {font-size: 20px; margin-top:16px;}
+
+	p {font-size: 16px;}
+
+	.layout {width: calc(100% - 48px);}
+
+	/* guide */
+	article > section > div > .sub_tit {font-size: 12px;}
+	article > section > div ul > li > h5{font-size: 16px;}
+	article > section > div ul > li > img.pa50{padding:10px;}
+
+	section > div ul.img_list {margin-right: -16px;margin-top: 16px;margin-left: -16px;}
+	section > div ul.img_list > h5 {margin-right: 16px;margin-left: 16px;}
+	section > div ul.img_list > li{margin-right: 16px;margin-left: 16px; margin-bottom: 32px;}
+	section > div ul.img_list.img_1 > li{width: calc(100% - 32px);}
+	section > div ul.img_list.img_2 > li{width: calc(100% - 32px);}
+	section > div ul.img_list.img_3 > li{width: calc(100% - 32px);}
+	section > div ul.img_list.img_4 > li{width: calc(100% - 32px);}
+	section > div ul.img_list.img_5 > li{width: calc(33.3333% - 32px);}
+	section > div ul.img_list.img_6 > li{width: calc(50% - 32px);}
+
+	section > div > ul.zoom_img > li.zoom_target {margin-bottom: 12px;}
+	section > div > ul.zoom_img > li.zoom_target + li {padding-top: 12px;margin-left: 0;width: calc(100% + 12px);margin-left: -6px;overflow: hidden;}
+	section > div > ul.zoom_img > li.zoom_target + li > img{width: calc(25% - 12px); margin-right: 6px; margin-left: 6px;}
+	section > div > ul.zoom_img > li.zoom_target + li > img:nth-child(1){margin-left: 6px;}
+
+	section > div > div.top_tab > ul.tab {margin-top: 32px;line-height: 27px;font-size: 16px;}
+	section > div > div.top_tab > ul.tab > li {margin-right: 16px;}
+
+	section > div > div.top_tab > div.tab_content li p{line-height: 23px;font-size: 12px;}
+
+	section > div > ul.colors_guide > li {height: 240px;}
+	section > div > ul.colors_guide > li > div > ul {font-size: 12px; line-height: 1.8;}
+	section > div > ul.colors_guide > li > div > ul > li > span {width: 75px;}
+
+	section> div > div.aside_tab > ul.tab > li {line-height: 27px;font-size: 16px;}
+
+}
