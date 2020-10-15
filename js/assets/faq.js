@@ -1,12 +1,6 @@
 $(document).ready(function(){
 	if (window_w < 1200) {
-		var gnb_header_txt = $('[tab]').eq(0).text();
 		$('header').attr('theme', 'dark');
-
-		// aside tab으로 변경
-		$('header').append('<div class="tab_gnb"><span class="txt"></span></div>');
-		$('.tab_gnb .txt').text(gnb_header_txt);
-		$('.tab_gnb').append('<svg width="16" height="10" viewBox="0 0 16 10"><path id="a" d="M16 .333v3.084l-8 6.25-8-6.25V.333l8 6.25z" fill="currentColor"></path></svg>');
 	} else {
 		$('header').attr('theme', 'light');
 	}

@@ -78,8 +78,8 @@ input[type=range]::-ms-thumb {box-shadow: none;border: 1px solid #F0F0F1;height:
 input[type=range]:focus::-ms-fill-lower {background: none;}input[type=range]:focus::-ms-fill-upper {background: none;}
 
 /* header */
-header {position: fixed;top: 0;width: 100%;height: 90px;z-index: 10;/*border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);*/}
-header > div.layout {position: static; height: 100%;}
+header {position: fixed;top: 0;width: 100%;z-index: 10;/*border-bottom: 0.1rem solid rgba(78, 84, 91, 0.3);*/}
+header > div.layout {position: static; height: 90px;}
 header > div.layout > div.grid {height: 100%; display: flex; position: relative;z-index: 1}
 header > div.layout > div.bg {position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: #0c2340;display: none;}
 header[theme="dark"]  {background-color: #0c2340; }

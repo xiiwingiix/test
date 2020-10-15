@@ -35,19 +35,29 @@ $(window).scroll(function(){
 			target_class = target.attr('class');
 
 		if (target_top < scroll_top){
-			$('.main_nav > li.on').removeClass('on');
-			$('.main_nav > li.'+target_class).addClass('on');
+			if (window_w < 1200) {
+				$('.tab_gnb .txt').html(target_class+' - <span class="category_list"></span>')
+			} else {
+				$('.main_nav > li.on').removeClass('on');
+				$('.main_nav > li.'+target_class).addClass('on');
+			}
+
 		}
 	});
 
 	$('section > div').each(function(index, item){
 		var target 		= $(this),
 			target_top 	= target.offset().top,
-			target_id 	= target.attr('id');
+			target_id 	= target.attr('id')
 
 		if (target_top < scroll_top){
-			$('.sub_nav > li.on').removeClass('on');
-			$('.sub_nav [href="#'+target_id+'"]').closest('li').addClass('on');
+			if (window_w < 1200) {
+				var category_list = $('.sub_nav [href="#'+target_id+'"]').text();
+				$('.category_list').text(category_list);
+			} else {
+				$('.sub_nav > li.on').removeClass('on');
+				$('.sub_nav [href="#'+target_id+'"]').closest('li').addClass('on');
+			}
 		}
 	})
 
