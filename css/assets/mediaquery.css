@@ -4,7 +4,6 @@
 	h5 {margin-bottom: 24px;font-size: 24px;}
 	p {line-height: 1.5;}
 
-
 	.layout {width: calc(100% - 288px);}
 	.layout > aside {font-size: 14px;line-height: 28px; display: block;}
 	.layout > aside .main_nav > li.on::before {top: 14px;}
@@ -26,22 +25,27 @@
 
 	header ul.category {font-size: 14px; display: none;}
 	header .tab_gnb {width: 100%;padding-left: 144px;padding-right: 144px; line-height: 56px; outline: 1px solid #a7aeb9;font-size: 14px;background-color: #F0F0F1;height: 56px;line-height: 56px;}
-	body[theme="dark"] header .tab_gnb {background-color: #0c2340;}
 	header .tab_gnb  svg{float: right; height: 56px;}
 
 	.layout > aside {display: none; position: fixed;bottom: 0;left: 0;width: 100%;height:100%;margin-top:0;background-color: #F0F0F1; z-index: 1; font-size: 14px;line-height: 36px;}
 	.layout > aside .main_nav > li.on::before {top: 18px;}
 	.layout > aside.on_header {padding-top: 146px;}
-	.layout > aside ul{overflow: auto; padding-top:20px; padding-left: 170px;padding-right: 170px; height: calc(100% - 147px); overflow: auto;} /* 147 : 56px(.tab_gnb) + 90(header) */
 
 	.layout > article {width: 100%; margin-left: 0;}
+	.layout > aside > ul{width: 100%; padding-top:20px; padding-left: 170px;padding-right: 170px; height: 100%; overflow: auto;}
 
+	body[theme="dark"] header .tab_gnb {background-color: #0c2340;}
+	body[theme="dark"] .layout > aside {color: #0c2340;}
 
 	div.txt-content > .layout {text-align: left;}
 	div.txt-content > .layout > article {width: calc((100% - (64px*15))/16*12 + 64px*11); margin-left: calc((100% - (64px*15))/16*2 + 64px*2); }
 
 	/* guide */
+	.guide aside > ul.main_nav > li > ul.sub_nav > li {color: #0c2340; font-weight: 300;}
+	.guide aside > ul.main_nav > li > ul.sub_nav > li.on {color: #0c2340;}
+
 	section > div ul.img_list.img_6 > li{width: calc(25% - 64px);}
+	section > div > div.img_slider_wrap > input[type=range]{width: 80%;}
 	section > div > div.swiper-container {margin-top: 32px;padding-bottom: 24px;}
 
 	/* faq */
@@ -73,6 +77,7 @@
 	header .tab_gnb {padding-left: 96px;padding-right: 96px;}
 
 	.layout {width: calc(100% - 192px);}
+	.layout > aside {height:calc(100% - 116px);}
 
 	.mk_grid {width: calc(100% - 192px);-ms-grid-column-gap: 32px;grid-column-gap: 32px;-ms-grid-template-columns: repeat(6, 1fr);grid-template-columns: repeat(6, 1fr);}
 
@@ -134,10 +139,12 @@
 
 	section > div > div.top_tab > div.tab_content li p{line-height: 23px;font-size: 12px;}
 
-	section > div > ul.colors_guide > li {height: 240px;}
+	section > div > ul.colors_guide {-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;}
+	section > div > ul.colors_guide > li {height: 50px;}
 	section > div > ul.colors_guide > li > div > ul {font-size: 12px; line-height: 1.8;}
 	section > div > ul.colors_guide > li > div > ul > li > span {width: 75px;}
+	section > div > ul.colors_guide > li.on {height: 180px;}
 
-	section> div > div.aside_tab > ul.tab > li {line-height: 27px;font-size: 16px;}
+	section> div > div.aside_tab > ul.tab > li {line-height: 27px;font-size: 16px; margin-bottom: 12px;}
 
 }

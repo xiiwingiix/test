@@ -136,7 +136,14 @@ $(document).on('click', '.btn_upcoming', function(){
 });
 
 $(document).on('click','.tab_gnb', function(){
-	$('aside').show();
+	var is_show_header = $('header > .layout').is(':visible');
+
+	var header_height  = $('header > .layout').height();
+	var tab_gnb_height = $('.tab_gnb').height();
+
+	var margin = is_show_header ? header_height + tab_gnb_height : tab_gnb_height
+	$('aside').css('height', 'calc(100% - '+ margin +'px)').show();
+	$('body').css('overflow','hidden');
 
 	return false;
 });

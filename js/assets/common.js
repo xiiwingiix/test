@@ -1,7 +1,8 @@
 var window_w = $(window).width();
 
 function goto($hashtag){
-	document.location = '/html/guide.html' + $hashtag;
+	var pathname = window.location.pathname;
+	document.location = pathname + $hashtag;
 }
 
 function Marquee (selector, direction, speed){
