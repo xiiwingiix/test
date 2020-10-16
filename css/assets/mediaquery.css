@@ -79,7 +79,7 @@
 
 	.layout {width: calc(100% - 192px);}
 	.layout > aside {height:calc(100% - 116px);}
-	.layout > aside > ul{padding-left: 24px; padding-right: 24px;}
+	.layout > aside > ul{padding-left: 48px; padding-right: 48px;}
 
 	.mk_grid {width: calc(100% - 192px);-ms-grid-column-gap: 32px;grid-column-gap: 32px;-ms-grid-template-columns: repeat(6, 1fr);grid-template-columns: repeat(6, 1fr);}
 
