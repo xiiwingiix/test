@@ -138,12 +138,14 @@ $(document).on('click', '.btn_upcoming', function(){
 $(document).on('click','.tab_gnb', function(){
 	var is_show_header = $('header > .layout').is(':visible');
 	var is_show_aside  = $('aside').is(':visible');
-	
+
 	var header_height  = $('header > .layout').height();
 	var tab_gnb_height = $('.tab_gnb').height();
 
 	if(is_show_aside) {
 		$('aside').hide();
+		$('body').css('overflow','auto');
+
 	} else {
 		var margin = is_show_header ? header_height + tab_gnb_height : tab_gnb_height;
 
